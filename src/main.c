@@ -41,7 +41,7 @@ void _start()
     uart_puts("Done\n");
 
     uart_puts(" * Testing sysfn...\n");
-    asm volatile("int $0x80");
+    asm volatile("sti\nint $0x80");
     uart_puts(" * Done\n");
 
     while(1);

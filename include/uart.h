@@ -23,8 +23,6 @@ static inline void uart_puts(char *s)
 static inline void uart_puthex(u64 val)
 {
     char buf[17];
-    for (int i = 0; i < 17; i++)
-        buf[i] = 0;
     itoh(val, buf);
     uart_puts(buf);
 }

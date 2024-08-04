@@ -1,6 +1,3 @@
-// IHC - Interrupt Handler Callers
-// 256 interrupt handlers, each with a unique ID
-
 .global ihc0
 .extern ihc0_handler
 ihc0:
@@ -261,25 +258,16 @@ ihc31:
 .extern ihc32_handler
 ihc32:
     cli
-    call ihc32_handler
-    sti
-    iretq
 
 .global ihc33
 .extern ihc33_handler
 ihc33:
     cli
-    call ihc33_handler
-    sti
-    iretq
 
 .global ihc34
 .extern ihc34_handler
 ihc34:
     cli
-    call ihc34_handler
-    sti
-    iretq
 
 .global ihc35
 .extern ihc35_handler
@@ -348,24 +336,18 @@ ihc42:
 .global ihc43
 .extern ihc43_handler
 ihc43:
-    cli
-    call ihc43_handler
     sti
     iretq
 
 .global ihc44
 .extern ihc44_handler
 ihc44:
-    cli
-    call ihc44_handler
     sti
     iretq
 
 .global ihc45
 .extern ihc45_handler
 ihc45:
-    cli
-    call ihc45_handler
     sti
     iretq
 

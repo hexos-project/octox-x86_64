@@ -6,6 +6,7 @@
 #include <initrd.h>
 #include <ihc.h>
 #include <sysfn.h>
+#include <idt.h>
 
 extern BOOTBOOT bootboot;
 extern unsigned char environment[4096];
@@ -38,6 +39,10 @@ void _start()
     uart_puts(" * IHC Initialization... ");
     ihc_init();
     ihc_set_handler(0x80, sysfn_handler);
+    uart_puts("Done\n");
+
+    uart_puts(" * IDT Initialization... ");
+    idt_init();
     uart_puts("Done\n");
 
     uart_puts(" * Testing sysfn...\n");

@@ -15,8 +15,7 @@ void strrev(char *str) {
         char c = str[i];
         str[i] = str[j];
         str[j] = c;
-        i++;
-        j--;
+        i++; j--;
     }
 }
 

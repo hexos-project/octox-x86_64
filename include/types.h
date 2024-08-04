@@ -25,6 +25,11 @@ typedef int32_t i32;
 typedef int64_t i64;
 typedef uint64_t size_t;
 
+typedef uint64_t uintn;
+typedef int64_t intn;
+
+typedef char *error_t;
+
 #define null ((void*)0)
 
 #define __packed __attribute__((packed))

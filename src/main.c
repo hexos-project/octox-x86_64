@@ -3,7 +3,7 @@
 #include <bootboot.h>
 #include <uart.h>
 #include <config.h>
-#include <tar.h>
+#include <initrd.h>
 
 extern BOOTBOOT bootboot;
 extern unsigned char environment[4096];
@@ -30,7 +30,11 @@ void _start()
     uart_puthex(bootboot.mmap.ptr);
     uart_puts("\n");
 
-    tarball_t initrd = (tarball_t)bootboot.initrd_ptr;
+    initrd_t initrd = initrd_init((tarball_t)bootboot.initrd_ptr);
+
+    uart_puts("kernelrc: ");
+    uart_puts(initrd_get(initrd, "sys/kernelrc"));
+    uart_puts("\n");
 
     while(1);
 }

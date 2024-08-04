@@ -3,26 +3,9 @@
 #include <string.h>
 #include <memory.h>
 #include <math.h>
+#include <extc.h>
 
-/* typedef struct {
-    char name[100];
-    char mode[8];
-    char uid[8];
-    char gid[8];
-    char size[12];
-    char mtime[12];
-    char chksum[8];
-    char typeflag;
-    char linkname[100];
-    char magic[6];
-    char version[2];
-    char uname[32];
-    char gname[32];
-    char devmajor[8];
-    char devminor[8];
-    char prefix[155];
-    char pad[12];
-} tar_header_t; */
+error_t FileNotFoundError = "File not found";
 
 void tar_readfile(tarball_t tarball, char *fp, char *buff) {
     // fisrt find the file name
@@ -36,7 +19,17 @@ void tar_readfile(tarball_t tarball, char *fp, char *buff) {
             }
         }
     }
-    uart_puts("file not found\n");
+    throw(FileNotFoundError);
+}
+
+void *tar_getptr(tarball_t tarball, char *fp) {
+    // fisrt find the file name
+    for (tar_file_t *file = tarball; file->header.name[0] != '\0'; file++) {
+        if (strcmp(file->header.name, fp) == 0) {
+            return file->data;
+        }
+    }
+    throw("file not found");
 }
 
 void print_tarball_header(tar_file_t *file) {

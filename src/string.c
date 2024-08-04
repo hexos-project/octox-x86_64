@@ -21,7 +21,7 @@ void strrev(char *str) {
 
 void itoh(u64 value, char *str) {
     int i = 0;
-    while (value) {
+    while (value > 0) {
         str[i++] = (value % 16) + ((value % 16 < 10) ? '0' : 'A' - 10);
         value /= 16;
     }

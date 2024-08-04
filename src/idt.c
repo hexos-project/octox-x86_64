@@ -12,6 +12,7 @@
 intd_t idt[256];
 
 u16 get_cs(void) {
+    return 8;
     u16 cs;
     asm volatile("mov %%cs, %0" : "=r"(cs));
     return cs;

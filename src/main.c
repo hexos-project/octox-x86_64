@@ -5,6 +5,7 @@
 #include <config.h>
 #include <initrd.h>
 #include <ihc.h>
+#include <cpuid.h>
 
 extern BOOTBOOT bootboot;
 extern unsigned char environment[4096];
@@ -37,6 +38,10 @@ void _start()
     uart_puts(" * IHC Initialization... ");
     ihc_init();
     uart_puts("Done\n");
+
+    uart_puts(" * ");
+    //uart_puts(cpuid_getCpuidBrandString());
+    uart_puts("\n");
 
     while(1);
 }

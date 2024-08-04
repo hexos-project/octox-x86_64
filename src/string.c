@@ -8,13 +8,14 @@ int strlen(char *str) {
     return i;
 }
 
-void strrev(char *buffer) {
-    char c;
-    
-    for (int i = 0, j = strlen(buffer) - 1; i < j; i++, j--) {
-        c = buffer[i];
-        buffer[i] = buffer[j];
-        buffer[j] = c;
+void strrev(char *str) {
+    int i = 0;
+    int j = strlen(str) - 1;
+    while (i < j) {
+        char c = str[i];
+        str[i] = str[j];
+        str[j] = c;
+        i++; j--;
     }
 }
 

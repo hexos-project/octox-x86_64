@@ -40,8 +40,9 @@ void _start()
     ihc_set_handler(0x80, sysfn_handler);
     uart_puts("Done\n");
 
-    uart_puts(" * Testing sysfn... ");
+    uart_puts(" * Testing sysfn...\n");
     asm volatile("int $0x80");
+    uart_puts(" * Done\n");
 
     while(1);
 }

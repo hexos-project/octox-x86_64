@@ -20,6 +20,10 @@ void ihc_init(void) {
     }
 }
 
+void ihc_set_handler(u8 n, ihc_handler_t handler) {
+    ihc_handlers[n] = handler;
+}
+
 void ihc_default_handler(u8 n, state_t state) {
     uart_puts("Unhandled interrupt: ");
     uart_puthex(n);

@@ -5,6 +5,7 @@
 #include <config.h>
 #include <initrd.h>
 #include <ihc.h>
+#include <sysfn.h>
 
 extern BOOTBOOT bootboot;
 extern unsigned char environment[4096];
@@ -36,6 +37,7 @@ void _start()
 
     uart_puts(" * IHC Initialization... ");
     ihc_init();
+    ihc_set_handler(0x80, sysfn_handler);
     uart_puts("Done\n");
 
     while(1);

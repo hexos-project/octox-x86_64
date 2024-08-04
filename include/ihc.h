@@ -17,6 +17,8 @@ void ihc_init(void);
 
 void ihc_default_handler(u8, state_t);
 
+void ihc_set_handler(u8, ihc_handler_t);
+
 extern void ihc0_handler(void);
 extern void ihc1_handler(void);
 extern void ihc2_handler(void);

@@ -6,7 +6,6 @@ void puts(char *s);
 #include <bootboot.h>
 #include <uart.h>
 #include <config.h>
-#include <logo_hires.h>
 #include <tar.h>
 
 extern BOOTBOOT bootboot;

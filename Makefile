@@ -1,4 +1,4 @@
-CFLAGS = -Wall -fpic -ffreestanding -fno-stack-protector -nostdinc -nostdlib -I./include -Wall -Wno-pointer-sign -Wno-int-to-pointer-cast
+CFLAGS = -Wall -fpic -ffreestanding -fno-stack-protector -nostdinc -nostdlib -I./include -Wall -Wno-pointer-sign -Wno-int-to-pointer-cast -Os
 LDFLAGS =  -nostdlib -n -T link.ld
 STRIPFLAGS =  -s -K mmio -K fb -K bootboot -K environment -K initstack
 

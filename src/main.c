@@ -5,7 +5,7 @@
 #include <config.h>
 #include <initrd.h>
 #include <ihc.h>
-#include <cpuid.h>
+//#include <cpuid.h>
 
 extern BOOTBOOT bootboot;
 extern unsigned char environment[4096];

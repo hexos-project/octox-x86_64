@@ -1,3 +1,4 @@
 #pragma once
 
-#define UART_TRACE_GFX 0
+#define MMP "0.1.3"
+#define MLS "47"

@@ -6,7 +6,7 @@ SOURCES = $(wildcard src/*.c)
 OBJECTS = $(patsubst src/%.c,%.o,$(SOURCES))
 
 
-all: clean $(OBJECTS)
+all: config clean $(OBJECTS)
 	ld $(LDFLAGS) $(OBJECTS) -o kernel.elf
 	strip $(STRIPFLAGS) kernel.elf
 
@@ -18,3 +18,6 @@ mrproper:
 
 clean: mrproper
 	rm -f kernel.elf
+
+config:
+	$$SHELL ./genconfig.sh

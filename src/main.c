@@ -4,7 +4,7 @@
 #include <uart.h>
 #include <config.h>
 #include <initrd.h>
-// #include <ihc.h>
+#include <ihc.h>
 
 extern BOOTBOOT bootboot;
 extern unsigned char environment[4096];

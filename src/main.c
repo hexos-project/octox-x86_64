@@ -4,6 +4,7 @@
 #include <uart.h>
 #include <config.h>
 #include <initrd.h>
+#include <ihc.h>
 
 extern BOOTBOOT bootboot;
 extern unsigned char environment[4096];
@@ -33,9 +34,9 @@ void _start()
 
     initrd = initrd_init(bootboot);
 
-    uart_puts("kernelrc: ");
-    uart_puts(initrd_get(initrd, "sys/kernelrc"));
-    uart_puts("\n");
+    uart_puts(" * IHC Initialization... ");
+    ihc_init();
+    uart_puts("Done\n");
 
     while(1);
 }

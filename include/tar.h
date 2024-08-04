@@ -36,7 +36,6 @@ typedef struct {
 typedef tar_file_t *tarball_t;
 
 void tar_readfile(tarball_t tarball, char *fp, char *buff);
-void list_tarball(tarball_t tarball);
 void *tar_getptr(tarball_t tarball, char *fp);
 
 extern error_t FileNotFoundError;

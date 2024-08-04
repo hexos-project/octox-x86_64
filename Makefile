@@ -7,17 +7,23 @@ OBJECTS = $(patsubst src/%.c,%.o,$(SOURCES))
 
 
 all: config clean $(OBJECTS)
-	ld $(LDFLAGS) $(OBJECTS) -o kernel.elf
-	strip $(STRIPFLAGS) kernel.elf
+	@echo "    LD\tkernel.elf"
+	@ld $(LDFLAGS) $(OBJECTS) -o kernel.elf
+	@echo "    SP\tkernel.elf"
+	@strip $(STRIPFLAGS) kernel.elf
 
 %.o: src/%.c
-	gcc $(CFLAGS) -mno-red-zone -c $< -o $@
+	@echo "    CC\t$<"
+	@gcc $(CFLAGS) -mno-red-zone -c $< -o $@
 
 mrproper:
-	rm -f *.o
+	@echo "    RM\t$(OBJECTS)"
+	@rm -f $(OBJECTS)
 
 clean: mrproper
-	rm -f kernel.elf
+	@echo "    RM\tkernel.elf"
+	@rm -f kernel.elf
 
 config:
-	$$SHELL ./genconfig.sh
+	@echo "    GEN\tconfig.h"
+	@$$SHELL ./genconfig.sh

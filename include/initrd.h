@@ -2,8 +2,9 @@
 
 #include "types.h"
 #include "tar.h"
+#include "bootboot.h"
 
 typedef tarball_t initrd_t;
 
-initrd_t initrd_init(tarball_t tarball);
+initrd_t initrd_init(BOOTBOOT bootboot);
 void *initrd_get(initrd_t initrd, char *fp);

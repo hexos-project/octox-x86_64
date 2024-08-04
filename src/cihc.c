@@ -9,15 +9,21 @@ void ihc##n##_handler(void) { \
 	register long long int r_rcx asm("rcx"); \
 	register long long int r_rsp asm("rsp"); \
     state_t state = { r_rax, r_rbx, r_rcx, r_rsp }; \
-    ihc_handlers[n](state); \
+    ihc_handlers[n](n, state); \
 }
 
 ihc_handler_t ihc_handlers[256];
 
 void ihc_init(void) {
     for (int i = 0; i < 256; i++) {
-        ihc_handlers[i] = NULL;
+        ihc_handlers[i] = ihc_default_handler;
     }
+}
+
+void ihc_default_handler(u8 n, state_t state) {
+    uart_puts("Unhandled interrupt: ");
+    uart_puthex(n);
+    uart_puts("\n");
 }
 
 IHC_HANDLER(0)

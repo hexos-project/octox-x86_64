@@ -9,11 +9,13 @@ typedef struct {
     intn rsp;
 } state_t;
 
-typedef void (*ihc_handler_t)(state_t);
+typedef void (*ihc_handler_t)(u8, state_t);
 
 extern ihc_handler_t ihc_handlers[256];
 
 void ihc_init(void);
+
+void ihc_default_handler(u8, state_t);
 
 extern void ihc0_handler(void);
 extern void ihc1_handler(void);

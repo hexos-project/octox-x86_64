@@ -3,4 +3,4 @@
 #include <types.h>
 #include <ihc.h>
 
-void sysfn_handler(u8 n, state_t state);
+void sysfn_handler(u8 n);

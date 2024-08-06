@@ -4,12 +4,7 @@
 #define IHC_HANDLER(n) \
 void ihc##n##_handler(void) { \
     if (ihc_handlers[n] == NULL) return; \
-    register long long int r_rax asm("rax"); \
-	register long long int r_rbx asm("rbx"); \
-	register long long int r_rcx asm("rcx"); \
-	register long long int r_rsp asm("rsp"); \
-    state_t state = { r_rax, r_rbx, r_rcx, r_rsp }; \
-    ihc_handlers[n](n, state); \
+    ihc_handlers[n](n); \
 }
 
 ihc_handler_t ihc_handlers[256];

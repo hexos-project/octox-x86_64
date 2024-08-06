@@ -7,6 +7,7 @@
 #include <ihc.h>
 #include <sysfn.h>
 #include <idt.h>
+#include <cxx_main.h>
 
 extern BOOTBOOT bootboot;
 extern unsigned char environment[4096];
@@ -46,8 +47,10 @@ void _start()
     uart_puts("Done\n");
 
     uart_puts(" * Testing sysfn...\n");
-    asm volatile("int $0x80");
+    // asm volatile("int $0x80");
     uart_puts(" * Done\n");
+
+    cxx_main();
 
     while(1);
 }

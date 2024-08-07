@@ -11,7 +11,7 @@ ihc_handler_t ihc_handlers[256];
 
 void ihc_init(void) {
     for (int i = 0; i < 256; i++) {
-        ihc_handlers[i] = ihc_default_handler;
+        ihc_handlers[i] = (ihc_handler_t)ihc_default_handler;
     }
 }
 

@@ -13,7 +13,6 @@ extern BOOTBOOT bootboot;
 extern unsigned char environment[4096];
 extern u32 fb;
 u64 apicID;
-initrd_t initrd;
 
 void _start()
 {
@@ -37,18 +36,7 @@ void _start()
 
     initrd = initrd_init(bootboot);
 
-    uart_puts(" * IHC Initialization... ");
-    ihc_init();
-    ihc_set_handler(0x80, sysfn_handler);
-    uart_puts("Done\n");
-
-    uart_puts(" * IDT Initialization... ");
-    idt_init();
-    uart_puts("Done\n");
-
-    uart_puts(" * Testing sysfn...\n");
-    // asm volatile("int $0x80");
-    uart_puts(" * Done\n");
+    uart_puts(" * Starting C++ part\n");
 
     cxx_main();
 

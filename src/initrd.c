@@ -1,6 +1,8 @@
 #include <initrd.h>
 #include <tar.h>
 
+initrd_t initrd;
+
 initrd_t initrd_init(BOOTBOOT bootboot)
 {
     return (initrd_t)bootboot.initrd_ptr;

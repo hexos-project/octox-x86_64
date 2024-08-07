@@ -2,6 +2,4 @@
 
 #include "types.h"
 
-extern u64 apicID;
-
-int ACPI_CoreID();
+u32 ACPI_CoreID();

@@ -18,8 +18,6 @@ void _start()
     if (ACPI_CoreID()) asm volatile("cli; hlt");
 
     uart_puts("\n * Octox v" MMP "+rev" MLS " (build " __DATE__ " " __TIME__ ")\n");
-    // uart_puts(" * ACPI Core ID: 0x");  // absolutely useless coz it's always 0
-    // uart_puthex(bootboot.bspid);
     uart_puts("\n");
     uart_puts(" * INITRD located at 0x");
     uart_puthex(bootboot.initrd_ptr);

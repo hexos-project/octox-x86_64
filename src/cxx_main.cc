@@ -10,9 +10,8 @@
 
 nomangle
 void cxx_main() {
-    uart::puts(" * Hello from C++ part!\n");
-    uart::puts(" * IHC Initialization... ");
+    uart::cout << " * Hello from C++ part!\n";
+    uart::cout << " * IHC Initialization... ";
     // ihc_init();
-    uart::puts("Done\n");
-
+    uart::cout << "Done\n";
 }

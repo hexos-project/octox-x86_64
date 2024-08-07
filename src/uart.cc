@@ -34,3 +34,34 @@ void uart::puthex(u64 n)
     buf[16] = 0;
     puts(buf);
 }
+
+uart::ostream uart::cout;
+
+uart::ostream::ostream()
+{
+}
+
+uart::ostream& uart::ostream::operator<<(char c)
+{
+    uart::putc(c);
+    return *this;
+}
+
+uart::ostream& uart::ostream::operator<<(char *s)
+{
+    uart::puts(s);
+    return *this;
+}
+
+uart::ostream& uart::ostream::operator<<(const char *s)
+{
+    uart::puts(s);
+    return *this;
+}
+
+uart::ostream& uart::ostream::operator<<(u64 n)
+{
+    uart::puts("0x");
+    uart::puthex(n);
+    return *this;
+}

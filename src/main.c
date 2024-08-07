@@ -15,7 +15,7 @@ extern u32 fb;
 
 void _start()
 {
-    if (bootboot.bspid != 0) { while (1); }
+    if (bootboot.bspid) asm volatile("cli; hlt");
 
     uart_puts("\n * Octox v" MMP "+rev" MLS " (build " __DATE__ " " __TIME__ ")\n");
     uart_puts(" * ACPI Core ID: 0x");

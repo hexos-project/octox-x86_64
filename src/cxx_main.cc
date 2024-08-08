@@ -12,7 +12,6 @@
 nomangle
 void cxx_main() {
     uart::cout << " * Hello from C++ part!\n";
-    uart::cout << " * ACPI ID " << (u64)acpi::id() << "\n";
     uart::cout << " * IHC Initialization... ";
     // ihc_init();
     uart::cout << "Done\n";

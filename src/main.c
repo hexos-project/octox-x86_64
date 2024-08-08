@@ -15,19 +15,6 @@ extern u32 fb;
 
 void _start() {
     if (ACPI_CoreID()) while (1);
-    uart_puts("\n * Octox v" MMP "+rev" MLS " (build " __DATE__ " " __TIME__ ")\n");
-    uart_puts("\n");
-    uart_puts(" * INITRD located at 0x");
-    uart_puthex(bootboot.initrd_ptr);
-    uart_puts("\n");
-    uart_puts(" * INITRD size: 0x");
-    uart_puthex(bootboot.initrd_size);
-    uart_puts("\n");
-    uart_puts(" * memory map located at 0x");
-    uart_puthex(bootboot.mmap.ptr);
-    uart_puts("\n");
-
-    initrd = initrd_init(bootboot);
 
     cxx_main();
 

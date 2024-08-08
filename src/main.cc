@@ -1,4 +1,3 @@
-
 #include <types.h>
 #include <cpu.hh>
 #include <uart.hh>
@@ -19,6 +18,7 @@ extern "C" {
 nomangle
 void cxx_main() {
     uart::cout << "\n * Octox v" MMP "+rev" MLS " (build " __DATE__ " " __TIME__ ")\n";
+    return;
     uart::cout << "\n";
     uart::cout << " * INITRD located at 0x";
     uart::cout << bootboot.initrd_ptr;

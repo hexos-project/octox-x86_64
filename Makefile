@@ -7,17 +7,17 @@ ASFLAGS =
 CSOURCES = $(wildcard src/*.c)
 SSOURCES = $(wildcard src/*.S)
 CPPSOURCES = $(wildcard src/*.cc)
-OBJECTS = $(patsubst src/%.c,%.o,$(CSOURCES)) $(patsubst src/%.S,%.o,$(SSOURCES)) $(patsubst src/%.cc,%.o,$(CPPSOURCES))
+OBJECTS = $(patsubst src/%.c,%.o,$(CSOURCES)) $(patsubst src/%.S,%.o,$(SSOURCES)) $(patsubst src/%.cc,%_cc.o,$(CPPSOURCES))
 SOURCES = $(CSOURCES) $(SSOURCES) $(CPPSOURCES)
 
 
 all: config clean $(OBJECTS)
-	@echo "    LD\tkernel.elf"
+	@echo "    LD\t$(OBJECTS)"
 	@ld $(LDFLAGS) $(OBJECTS) -o kernel.elf
 	@echo "    SP\tkernel.elf"
 	@strip $(STRIPFLAGS) kernel.elf
 
-%.o: src/%.cc
+%_cc.o: src/%.cc
 	@echo "    CC\t$<"
 	@g++ $(CXXFLAGS) -mno-red-zone -c $< -o $@
 

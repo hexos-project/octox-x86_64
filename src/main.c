@@ -13,10 +13,7 @@ extern BOOTBOOT bootboot;
 extern unsigned char environment[4096];
 extern u32 fb;
 
-void _start()
-{
-    if (ACPI_CoreID()) asm volatile("cli; hlt");
-
+void _start() {
     uart_puts("\n * Octox v" MMP "+rev" MLS " (build " __DATE__ " " __TIME__ ")\n");
     uart_puts("\n");
     uart_puts(" * INITRD located at 0x");

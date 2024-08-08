@@ -7,7 +7,7 @@ ASFLAGS =
 CSOURCES = $(wildcard src/*.c)
 SSOURCES = $(wildcard src/*.S)
 CPPSOURCES = $(wildcard src/*.cc)
-OBJECTS = $(patsubst src/%.c,%.o,$(CSOURCES)) $(patsubst src/%.S,%.o,$(SSOURCES)) $(patsubst src/%.cc,%_cc.o,$(CPPSOURCES))
+OBJECTS = $(patsubst src/%.c,%_c.o,$(CSOURCES)) $(patsubst src/%.S,%_s.o,$(SSOURCES)) $(patsubst src/%.cc,%_cc.o,$(CPPSOURCES))
 SOURCES = $(CSOURCES) $(SSOURCES) $(CPPSOURCES)
 
 
@@ -21,17 +21,17 @@ all: config clean $(OBJECTS)
 	@echo "    CC\t$<"
 	@g++ $(CXXFLAGS) -mno-red-zone -c $< -o $@
 
-%.o: src/%.c
+%_c.o: src/%.c
 	@echo "    CC\t$<"
 	@gcc $(CFLAGS) -mno-red-zone -c $< -o $@
 
-%.o: src/%.S
+%_s.o: src/%.S
 	@echo "    AS\t$<"
 	@as $(ASFLAGS) -o $@ $<
 
 mrproper:
 	@echo "    RM\t$(OBJECTS)"
-	@rm -f $(OBJECTS)
+	@rm -f *.o
 
 clean: mrproper
 	@clear

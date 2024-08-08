@@ -1,7 +1,6 @@
 #pragma once
 
 #include "types.h"
-#include "acpi.h"
 
 namespace acpi {
     static inline u16 id() {

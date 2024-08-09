@@ -16,8 +16,8 @@ extern u32 fb;
 void _start() {
     if (ACPI_CoreID()) while (1);
 
-    uart_puts(" * C part report: initrd located at 0x");
-    uart_puthex(bootboot.initrd_ptr);
+    uart_puts(" * C part report: memory map located at 0x");
+    uart_puthex((u64)&bootboot.mmap);
     uart_puts("\n");
     uart_putc('\n');
 

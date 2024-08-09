@@ -29,6 +29,7 @@ void cxx_main() {
     uart::cout << " * memory map located at 0x";
     uart::cout << bootboot.mmap.ptr;
     uart::cout << '\n';
+    uart::cout << " * ACPI ID: " << (u64)acpi::id() << '\n';
 
     initrd = initrd_init(bootboot);
     uart::cout << " * IHC Initialization... ";

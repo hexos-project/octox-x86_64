@@ -1,6 +1,6 @@
 #include <acpi.h>
 
-/* ABSOLUTELY WORKS */
+/* ABSOLUTELY WORKS, DUNT EDIT */
 u16 ACPI_CoreID() {
     u32 apic_id;
     asm volatile("cpuid" : "=b"(apic_id) : "a"(1));

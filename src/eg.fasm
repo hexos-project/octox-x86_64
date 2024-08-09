@@ -5,7 +5,7 @@ extrn uart_puts
 
 section '.text' executable
 fasm_main:
-    mov rsi, message
+    mov rdi, message
     call uart_puts
     ret
 

@@ -19,14 +19,21 @@ void strrev(char *str) {
     }
 }
 
-void itoh(u64 value, char *str) {
-    int i = 0;
-    while (value > 0) {
-        str[i++] = (value % 16) + ((value % 16 < 10) ? '0' : 'A' - 10);
+void itoh(u64 value, char* str) {
+    int index = 0;
+    char hexses[17] = "0123456789abcdef";
+    while (value > 0)
+    {
+        str[index] = hexses[value % 16];
+        index++;
         value /= 16;
     }
+
+    str[index] = '\0';
+
     strrev(str);
 }
+
 
 void itoa(int value, char *str, int base) {
     int i = 0;

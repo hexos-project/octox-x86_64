@@ -18,16 +18,10 @@ extern "C" {
 nomangle
 void cxx_main() {
     uart::cout << "\n * Octox v" MMP "+rev" MLS " (build " __DATE__ " " __TIME__ ")\n";
-    uart::cout << "\n";
-    uart::cout << " * INITRD located at 0x";
-    uart::cout << bootboot.initrd_ptr;
-    uart::cout << "\n";
-    uart::cout << " * INITRD size: 0x";
-    uart::cout << bootboot.initrd_size;
     uart::cout << '\n';
-    uart::cout << " * memory map located at 0x";
-    uart::cout << bootboot.mmap.ptr;
-    uart::cout << '\n';
+    uart::cout << " * INITRD located at 0x" << bootboot.initrd_ptr << '\n';
+    uart::cout << " * INITRD size: 0x" << bootboot.initrd_size << '\n';
+    uart::cout << " * memory map located at " << bootboot.mmap.ptr << '\n';
     uart::cout << " * ACPI ID: " << (u64)acpi::id() << '\n';
 
     initrd = initrd_init(bootboot);

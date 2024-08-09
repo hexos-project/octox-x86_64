@@ -9,4 +9,4 @@ gas_hello:
 
 .data
 message:
-    .ascii "Hello from gas!\n"
+    .ascii "\n * Hello from GAS!\n"

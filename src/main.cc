@@ -18,7 +18,7 @@ extern "C" {
 }
 
 nomangle void cxx_hello() {
-    uart::cout << "Hello from C++!\n";
+    uart::cout << "\n * Hello from C++!\n";
 }
 
 nomangle

@@ -10,4 +10,4 @@ fasm_main:
     ret
 
 section '.data'
-message: db 'Hello from FASM!', 0
+message: db 10, ' * Hello from FASM!', 10, 0

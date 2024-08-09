@@ -21,7 +21,7 @@ void cxx_main() {
     uart::cout << '\n';
     uart::cout << " * INITRD located at 0x" << bootboot.initrd_ptr << '\n';
     uart::cout << " * INITRD size: 0x" << bootboot.initrd_size << '\n';
-    uart::cout << " * memory map located at " << bootboot.mmap.ptr << '\n';
+    uart::cout << " * memory map located at " << (u64)&bootboot.mmap.ptr << '\n';
     uart::cout << " * ACPI ID: " << (u64)acpi::id() << '\n';
 
     initrd = initrd_init(bootboot);

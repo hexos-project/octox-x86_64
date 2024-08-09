@@ -1,12 +1,13 @@
 #pragma once
 
 #include <types.h>
+#include <cc.hh>
 
 extern "C" {
     #include <idt.h>
 }
 
 namespace IDT {
-    void init();
-    void load();
+    void stub init() WRAP(idt_init());
+    void stub load() WRAP(idt_load());
 }

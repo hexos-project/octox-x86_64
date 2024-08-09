@@ -9,9 +9,6 @@ typedef signed short int16_t;
 typedef signed int int32_t;
 typedef signed long long int64_t;
 
-#ifndef __cplusplus
-typedef uint8_t bool;
-#endif
 #define true 1
 #define false 0
 
@@ -29,6 +26,10 @@ typedef uint64_t size_t;
 
 typedef uint64_t uintn;
 typedef int64_t intn;
+
+#ifndef __cplusplus
+typedef u8 bool;
+#endif
 
 typedef char *error_t;
 
@@ -48,6 +49,8 @@ typedef char *error_t;
 
 #define __const __attribute__((const))
 #define __pure __attribute__((pure))
+
+#define stub static inline
 
 #ifdef __cplusplus
 #define nomangle extern "C"

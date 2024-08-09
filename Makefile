@@ -1,14 +1,16 @@
-CFLAGS = -Wall -fpic -ffreestanding -fno-stack-protector -nostdinc -nostdlib -I./include -Wall -Wno-return-type -Wno-int-to-pointer-cast -Os
+CFLAGS = -Wall -fpic -ffreestanding -fno-stack-protector -nostdinc -nostdlib -I./include -Wall -Wno-return-type -Wno-int-to-pointer-cast -Os -Wall -Werror
 CXXFLAGS = $(CFLAGS) -fno-exceptions -fno-rtti
 LDFLAGS =  -nostdlib -n -T link.ld
 STRIPFLAGS =  -s -K mmio -K fb -K bootboot -K environment -K initstack
 ASFLAGS =
+RSFLAGS = --crate-type=staticlib -C panic=abort
 
 CSOURCES = $(wildcard src/*.c)
 SSOURCES = $(wildcard src/*.S)
 CPPSOURCES = $(wildcard src/*.cc)
-OBJECTS = $(patsubst src/%.c,%_c.o,$(CSOURCES)) $(patsubst src/%.S,%_s.o,$(SSOURCES)) $(patsubst src/%.cc,%_cc.o,$(CPPSOURCES))
-SOURCES = $(CSOURCES) $(SSOURCES) $(CPPSOURCES)
+RSSOURCES = $(wildcard src/*.rs)
+OBJECTS = $(patsubst src/%.c,%_c.o,$(CSOURCES)) $(patsubst src/%.S,%_s.o,$(SSOURCES)) $(patsubst src/%.cc,%_cc.o,$(CPPSOURCES)) $(patsubst src/%.rs,%_rs.o,$(RSSOURCES))
+SOURCES = $(CSOURCES) $(SSOURCES) $(CPPSOURCES) $(RSSOURCES)
 
 
 all: config clean $(OBJECTS)
@@ -28,6 +30,10 @@ all: config clean $(OBJECTS)
 %_s.o: src/%.S
 	@echo "    AS\t$<"
 	@as $(ASFLAGS) -o $@ $<
+
+%_rs.o: src/%.rs
+	@echo "    RS\t$<"
+	@rustc $(RSFLAGS) $< -o $@
 
 mrproper:
 	@echo "    RM\t$(OBJECTS)"

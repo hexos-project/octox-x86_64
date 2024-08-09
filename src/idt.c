@@ -11,6 +11,17 @@
 
 intd_t idt[256];
 
+void idt_load() {
+    struct {
+        uint16_t limit;
+        uint64_t base;
+    } __packed idtr;
+    idtr.limit = sizeof(idt) - 1;
+    idtr.base = (uint64_t)&idt;
+    asm volatile("lidt %0" : : "m"(idtr));
+    asm volatile("sti\n");
+}
+
 u16 get_cs(void) {
     return 8;
     u16 cs;

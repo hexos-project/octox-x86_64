@@ -2,7 +2,7 @@
 
 /* ABSOLUTELY WORKS */
 u16 ACPI_CoreID() {
-    u16 apic_id;
+    u32 apic_id;
     asm volatile("cpuid" : "=b"(apic_id) : "a"(1));
-    return apic_id >> 24;
+    return (u16)(apic_id >> 24); // pls use explicit casting everywhere where u can
 }

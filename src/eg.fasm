@@ -5,9 +5,8 @@ extrn uart_puts
 
 section '.text' executable
 fasm_main:
-    push message
+    mov rsi, message
     call uart_puts
-    add rsp, 8
     ret
 
 section '.data'

@@ -9,6 +9,7 @@
 #include <idt.h>
 #include <cxx_main.h>
 #include <rs.h>
+#include <fasm_eg.h>
 
 extern BOOTBOOT bootboot;
 extern unsigned char environment[4096];
@@ -16,6 +17,8 @@ extern u32 fb;
 
 void _start() {
     if (ACPI_CoreID()) while (1);
+
+    fasm_main();
 
     rs_main();
 

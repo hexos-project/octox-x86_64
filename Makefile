@@ -9,8 +9,13 @@ CSOURCES = $(wildcard src/*.c)
 SSOURCES = $(wildcard src/*.S)
 CPPSOURCES = $(wildcard src/*.cc)
 RSSOURCES = $(wildcard src/*.rs)
-OBJECTS = $(patsubst src/%.c,%_c.o,$(CSOURCES)) $(patsubst src/%.S,%_s.o,$(SSOURCES)) $(patsubst src/%.cc,%_cc.o,$(CPPSOURCES)) $(patsubst src/%.rs,%_rs.o,$(RSSOURCES))
-SOURCES = $(CSOURCES) $(SSOURCES) $(CPPSOURCES) $(RSSOURCES)
+FASMSOURCES = $(wildcard src/*.fasm)
+OBJECTS = $(patsubst src/%.c,%_c.o,$(CSOURCES)) \
+		  $(patsubst src/%.S,%_s.o,$(SSOURCES)) \
+		  $(patsubst src/%.cc,%_cc.o,$(CPPSOURCES)) \
+		  $(patsubst src/%.rs,%_rs.o,$(RSSOURCES)) \
+		  $(patsubst src/%.fasm,%_fasm.o,$(FASMSOURCES))
+SOURCES = $(CSOURCES) $(SSOURCES) $(CPPSOURCES) $(RSSOURCES) $(FASMSOURCES)
 
 
 all: config clean $(OBJECTS)
@@ -34,6 +39,10 @@ all: config clean $(OBJECTS)
 %_rs.o: src/%.rs
 	@echo "    RS\t$<"
 	@rustc $(RSFLAGS) $< -o $@
+
+%_fasm.o: src/%.fasm
+	@echo "    FA\t$<"
+	@fasm $< $@ > /dev/null
 
 mrproper:
 	@echo "    RM\t$(OBJECTS)"

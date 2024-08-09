@@ -2,6 +2,7 @@
 #include <cpu.hh>
 #include <uart.hh>
 #include <acpi.hh>
+#include <idt.hh>
 
 extern "C" {
     #include <ihc.h>
@@ -27,5 +28,11 @@ void cxx_main() {
     initrd = initrd_init(bootboot);
     uart::cout << " * IHC Initialization... ";
     ihc_init();
+    uart::cout << "Done\n";
+    uart::cout << " * IDT Initialization... ";
+    idt_init();
+    uart::cout << "Done\n";
+    uart::cout << " * Setting up IDTR... ";
+    IDT::load();
     uart::cout << "Done\n";
 }

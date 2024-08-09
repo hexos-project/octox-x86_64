@@ -276,7 +276,4 @@ void idt_init()
     SETUP_IDT(253)
     SETUP_IDT(254)
     SETUP_IDT(255)
-    // lidt idt
-    asm volatile("lidt %0" : : "m"(idt));
-    asm volatile("sti\n");
 }

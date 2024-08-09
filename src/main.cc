@@ -26,6 +26,6 @@ void cxx_main() {
 
     initrd = initrd_init(bootboot);
     uart::cout << " * IHC Initialization... ";
-    // ihc_init();
+    ihc_init();
     uart::cout << "Done\n";
 }

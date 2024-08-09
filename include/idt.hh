@@ -7,5 +7,6 @@ extern "C" {
 }
 
 namespace IDT {
+    void init();
     void load();
 }

@@ -30,7 +30,7 @@ void cxx_main() {
     ihc_init();
     uart::cout << "Done\n";
     uart::cout << " * IDT Initialization... ";
-    idt_init();
+    IDT::init();
     uart::cout << "Done\n";
     uart::cout << " * Setting up IDTR... ";
     IDT::load();

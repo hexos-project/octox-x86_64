@@ -10,3 +10,7 @@ void IDT::load() {
     asm volatile("lidt %0" : : "m"(idtr));
     asm volatile("sti\n");
 }
+
+void IDT::init() {
+    idt_init();
+}

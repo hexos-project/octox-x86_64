@@ -18,6 +18,10 @@ extern u32 fb;
 void _start() {
     if (ACPI_CoreID()) while (1);
 
+    uart_puts("Hello from C!\n");
+
+    cxx_hello();
+
     fasm_main();
 
     rs_main();

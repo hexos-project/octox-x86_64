@@ -17,6 +17,10 @@ extern "C" {
     extern BOOTBOOT bootboot;
 }
 
+nomangle void cxx_hello() {
+    uart::cout << "Hello from C++!\n";
+}
+
 nomangle
 void cxx_main() {
     uart::cout << "\n * Octox v" MMP "+rev" MLS " (build " __DATE__ " " __TIME__ ")\n";

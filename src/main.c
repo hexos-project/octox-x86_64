@@ -16,6 +16,11 @@ extern u32 fb;
 void _start() {
     if (ACPI_CoreID()) while (1);
 
+    uart_puts(" * C part report: initrd located at 0x");
+    uart_puthex(bootboot.initrd_ptr);
+    uart_puts("\n");
+    uart_putc('\n');
+
     cxx_main();
 
     while(1);

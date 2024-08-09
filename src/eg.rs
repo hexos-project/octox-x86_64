@@ -1,10 +1,5 @@
 #![no_std]
 #[panic_handler]fn panic(_:&::core::panic::PanicInfo)->!{loop{}}
-#[no_mangle] pub unsafe extern "C"
-fn suma (a: i32, b: i32) -> i32
-{
-    a + b
-}
 
 extern {
     fn uart_puts(s: *const u8);

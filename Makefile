@@ -3,7 +3,7 @@ CXXFLAGS = $(CFLAGS) -fno-exceptions -fno-rtti
 LDFLAGS =  -nostdlib -n -T link.ld
 STRIPFLAGS =  -s -K mmio -K fb -K bootboot -K environment -K initstack
 ASFLAGS =
-RSFLAGS = --crate-type=staticlib -C panic=abort
+RSFLAGS = --crate-type=staticlib -C panic=abort -C opt-level=3 -C debuginfo=none -C strip=symbols
 
 CSOURCES = $(wildcard src/*.c)
 SSOURCES = $(wildcard src/*.S)

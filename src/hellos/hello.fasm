@@ -1,13 +1,13 @@
 format ELF64
 
-public fasm_main
+public fasm_hello
 extrn uart_puts
 
 section '.text' executable
-fasm_main:
+fasm_hello:
     mov rdi, message
     call uart_puts
     ret
 
 section '.data'
-message: db 10, ' * Hello from FASM!', 10, 0
+message: db ' * Hello from FASM!', 10, 0

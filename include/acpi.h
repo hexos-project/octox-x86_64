@@ -1,5 +1,9 @@
 #pragma once
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "types.h"
 
 #define ACPI_CMD_BUFFER_SIZE 8
@@ -18,3 +22,16 @@ u16 ACPI_CpuID();
 void ACPI_CmdCenter();
 void ACPI_SendCommand(u8 cpuid, u8 cmd, u64 a, u64 b, u64 c, u64 d);
 void ACPI_Register();
+
+#ifdef __cplusplus
+}
+
+nomangle {
+    #include "acpi.h"
+}
+
+namespace acpi {
+    u16 stub id() RWRAP(ACPI_CpuID());
+}
+
+#endif

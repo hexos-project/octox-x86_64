@@ -2,6 +2,10 @@
 
 #include "types.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 static inline void outb(uint16_t port, uint8_t val)
 {
     __asm__ volatile ( "outb %b0, %w1" : : "a"(val), "Nd"(port) : "memory");
@@ -42,3 +46,23 @@ static inline uint32_t indw(uint16_t port)
 	
 	return value;
 }
+
+#ifdef __cplusplus
+}
+
+struct PortProxy {
+	uint16_t port;
+	PortProxy(uint16_t port) : port(port) {}
+	void operator << (u8 val) { outb(port, val); }
+	void operator >> (u8 *target) { *target = inb(port); }
+	void operator << (u16 val) { outw(port, val); }
+	void operator >> (u16 *target) { *target = inw(port); }
+	void operator << (u32 val) { outdw(port, val); }
+	void operator >> (u32 *target) { *target = indw(port); }
+};
+
+namespace ports {
+    PortProxy stub port(uint16_t port) { return PortProxy(port); }
+}
+
+#endif

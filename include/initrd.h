@@ -4,9 +4,21 @@
 #include "tar.h"
 #include "bootboot.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef tarball_t initrd_t;
 
-extern initrd_t initrd;
-
-initrd_t initrd_init(BOOTBOOT bootboot);
+void initrd_init(BOOTBOOT bootboot);
 void *initrd_get(initrd_t initrd, char *fp);
+
+#ifdef __cplusplus
+}
+
+namespace initrd {
+    void stub init(BOOTBOOT bootboot) WRAP(initrd_init(bootboot));
+    stub void *get(initrd_t initrd, char *fp) RWRAP(initrd_get(initrd, fp));
+}
+
+#endif

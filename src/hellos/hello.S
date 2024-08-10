@@ -9,5 +9,5 @@ gas_hello:
 
 .data
 message:
-    .ascii "\n * Hello from GAS!\n"
+    .ascii " * Hello from GAS!\n"
     .byte 0

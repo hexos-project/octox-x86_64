@@ -1,25 +1,8 @@
 #include <ihc.h>
-#include <extc.h>
 
 #define IHC_HANDLER(n) \
 void ihc##n##_handler(void) { \
     ihc_handlers[n](n); \
-}
-
-ihc_handler_t ihc_handlers[256];
-
-void ihc_init(void) {
-    for (int i = 0; i < 256; i++) ihc_handlers[i] = (ihc_handler_t)ihc_default_handler;
-}
-
-void ihc_set_handler(u8 n, ihc_handler_t handler) {
-    ihc_handlers[n] = handler;
-}
-
-void ihc_default_handler(u8 n, state_t state) {
-    uart_puts("Unhandled interrupt: ");
-    uart_puthex(n);
-    uart_puts("\n");
 }
 
 IHC_HANDLER(0)
@@ -278,3 +261,4 @@ IHC_HANDLER(252)
 IHC_HANDLER(253)
 IHC_HANDLER(254)
 IHC_HANDLER(255)
+

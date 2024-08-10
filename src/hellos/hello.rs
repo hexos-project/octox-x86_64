@@ -14,9 +14,9 @@ extern {
 
 #[no_mangle]
 pub extern "C"
-fn rs_main() -> () {
+fn rs_hello() -> () {
     unsafe {
-        uart_puts(b"\n * Hello from Rust!\n\0" as *const u8);
+        uart_puts(b" * Hello from Rust!\n\0" as *const u8);
     }
     return ();
 }

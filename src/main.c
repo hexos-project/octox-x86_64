@@ -8,9 +8,7 @@
 #include <sysfn.h>
 #include <idt.h>
 #include <cxx_main.h>
-#include <rs.h>
-#include <fasm_eg.h>
-#include <gas_hello.h>
+#include <hellos.h>
 
 extern BOOTBOOT bootboot;
 extern unsigned char environment[4096];
@@ -22,16 +20,11 @@ void _start() {
     if (ACPI_CpuID()) while (1); // i will work on this later
 
     gas_hello();
-
-    uart_puts("\n * Hello from C!\n");
-
+    c_hello();
     cxx_hello();
-
-    fasm_main();
-
-    rs_main();
+    fasm_hello();
+    rs_hello();
 
     cxx_main();
-
     while(1);
 }

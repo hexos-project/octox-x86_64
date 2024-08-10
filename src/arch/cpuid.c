@@ -1,9 +1,9 @@
+/*
+
 #include <cpuid.h>
 #include <types.h>
 #include <string.h>
 #include <memory.h>
-
-/*
 
 char cpuidBrandString[25];
 

@@ -1,11 +1,11 @@
 #include <initrd.h>
 #include <tar.h>
 
-initrd_t initrd;
+initrd_t _initrd;
 
-initrd_t initrd_init(BOOTBOOT bootboot)
+void initrd_init(BOOTBOOT bootboot)
 {
-    return (initrd_t)bootboot.initrd_ptr;
+    _initrd = (initrd_t)bootboot.initrd_ptr;
 }
 
 void *initrd_get(initrd_t initrd, char *fp)

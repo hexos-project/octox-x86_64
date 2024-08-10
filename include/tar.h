@@ -1,9 +1,10 @@
 #pragma once
-/* tar Header Block, from POSIX 1003.1-1990.  */
-
-/* POSIX header.  */
 
 #include "types.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 #define TDIR 0x35
 #define TFIL 0x30
@@ -39,3 +40,16 @@ void tar_readfile(tarball_t tarball, char *fp, char *buff);
 void *tar_getptr(tarball_t tarball, char *fp);
 
 extern error_t FileNotFoundError;
+
+#ifdef __cplusplus
+}
+
+namespace tar {
+    using header_t = tar_header_t;
+    using file_t = tar_file_t;
+    using tarball_t = tarball_t;
+    void stub readfile(tarball_t tarball, char *fp, char *buff) WRAP(tar_readfile(tarball, fp, buff));
+    stub void * getptr(tarball_t tarball, char *fp) RWRAP(tar_getptr(tarball, fp));
+}
+
+#endif

@@ -1,26 +1,14 @@
 #include <types.h>
-#include <cpu.hh>
-#include <uart.hh>
-#include <acpi.hh>
-#include <idt.hh>
-#include <irq.hh>
+#include <uart.h>
+#include <acpi.h>
+#include <idt.h>
+#include <irq.h>
+#include <bootboot.h>
+#include <config.h>
+#include <initrd.h>
+#include <ihc.h>
 
-extern "C" {
-    #include <ihc.h>
-    #include <idt.h>
-    #include <sysfn.h>
-    #include <cxx_main.h>
-    #include <initrd.h>
-    #include <config.h>
-    #include <bootboot.h>
-    #include <acpi.h>
-
-    extern BOOTBOOT bootboot;
-}
-
-nomangle void cxx_hello() {
-    uart::cout << "\n * Hello from C++!\n";
-}
+extern BOOTBOOT bootboot;
 
 nomangle
 void cxx_main() {
@@ -32,9 +20,9 @@ void cxx_main() {
     uart::cout << " * ACPI ID (must be zero): " << (u64)acpi::id() << '\n';
     uart::cout << " * ACPI CPU count: " << (u64)ACPI_CpuCount << '\n';
 
-    initrd = initrd_init(bootboot);
+    initrd::init(bootboot);
     uart::cout << " * IHC Initialization... ";
-    ihc_init();
+    IHC::init();
     uart::cout << "Done\n";
     uart::cout << " * IDT Initialization... ";
     IDT::init();

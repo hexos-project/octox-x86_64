@@ -33,7 +33,11 @@ typedef u8 bool;
 
 typedef char *error_t;
 
+#ifdef __cplusplus
+#define null nullptr
+#else
 #define null ((void*)0)
+#endif
 
 #define __packed __attribute__((packed))
 #define __aligned(x) __attribute__((aligned(x)))
@@ -54,6 +58,8 @@ typedef char *error_t;
 
 #ifdef __cplusplus
 #define nomangle extern "C"
+#define WRAP(x) { x; return; }
+#define RWRAP(x) { return x; }
 #else
 #define nomangle
 #endif

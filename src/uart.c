@@ -24,10 +24,10 @@ void uart_puthex(u64 val)
 
 void uart_puthexb(u8 val)
 {
-    char buf[3];
+    char buf[17];
     for (int i = 0; i < 3; i++) buf[i] = 0;
     itoh(val, buf);
-    uart_puts(buf+2);
+    uart_puts(buf+14);
 }
 
 void uart_putdec(u32 val)

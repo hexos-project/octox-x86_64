@@ -1,13 +1,16 @@
 #pragma once
 
 #include <types.h>
-#include <ihc.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-void sysfn_handler(u8 n);
+void cxx_hello();
+void c_hello();
+void rs_hello();
+void fasm_hello();
+void gas_hello();
 
 #ifdef __cplusplus
 }

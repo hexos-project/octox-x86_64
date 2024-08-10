@@ -4,19 +4,28 @@ LDFLAGS =  -nostdlib -n -T link.ld
 STRIPFLAGS =  -s -K mmio -K fb -K bootboot -K environment -K initstack
 ASFLAGS =
 RSFLAGS = --crate-type=staticlib -C panic=abort -C opt-level=3 -C debuginfo=none -C strip=symbols
+OBJDIR = objects
 
-CSOURCES = $(wildcard src/*.c)
-SSOURCES = $(wildcard src/*.S)
-CPPSOURCES = $(wildcard src/*.cc)
-RSSOURCES = $(wildcard src/*.rs)
-FASMSOURCES = $(wildcard src/*.fasm)
-OBJECTS = $(patsubst src/%.c,%_c.o,$(CSOURCES)) \
-		  $(patsubst src/%.S,%_s.o,$(SSOURCES)) \
-		  $(patsubst src/%.cc,%_cc.o,$(CPPSOURCES)) \
-		  $(patsubst src/%.rs,%_rs.o,$(RSSOURCES)) \
-		  $(patsubst src/%.fasm,%_fasm.o,$(FASMSOURCES))
+CSOURCES = $(shell find src -name '*.c' -not -name '.*')
+SSOURCES = $(shell find src -name '*.S' -not -name '.*')
+CPPSOURCES = $(shell find src -name '*.cc' -not -name '.*')
+RSSOURCES = $(shell find src -name '*.rs' -not -name '.*')
+FASMSOURCES = $(shell find src -name '*.fasm' -not -name '.*')
+OBJECTS = $(patsubst src/%.c,$(OBJDIR)/%_c.o,$(CSOURCES)) \
+		  $(patsubst src/%.S,$(OBJDIR)/%_s.o,$(SSOURCES)) \
+		  $(patsubst src/%.cc,$(OBJDIR)/%_cc.o,$(CPPSOURCES)) \
+		  $(patsubst src/%.rs,$(OBJDIR)/%_rs.o,$(RSSOURCES)) \
+		  $(patsubst src/%.fasm,$(OBJDIR)/%_fasm.o,$(FASMSOURCES))
 SOURCES = $(CSOURCES) $(SSOURCES) $(CPPSOURCES) $(RSSOURCES) $(FASMSOURCES)
 
+
+build: prepare all
+
+prepare:
+	@echo "    RM\t$(OBJDIR)"
+	@rm -rf $(OBJDIR)
+	@echo "    MD\t$(OBJDIR)"
+	@mkdir -p $(dir $(OBJECTS))
 
 all: config clean $(OBJECTS)
 	@echo "    LD\t$(OBJECTS)"
@@ -24,31 +33,27 @@ all: config clean $(OBJECTS)
 	@echo "    SP\tkernel.elf"
 	@strip $(STRIPFLAGS) kernel.elf
 
-%_cc.o: src/%.cc
+$(OBJDIR)/%_cc.o: src/%.cc
 	@echo "    CC\t$<"
 	@g++ $(CXXFLAGS) -mno-red-zone -c $< -o $@
 
-%_c.o: src/%.c
+$(OBJDIR)/%_c.o: src/%.c
 	@echo "    CC\t$<"
 	@gcc $(CFLAGS) -mno-red-zone -c $< -o $@
 
-%_s.o: src/%.S
+$(OBJDIR)/%_s.o: src/%.S
 	@echo "    AS\t$<"
 	@as $(ASFLAGS) -o $@ $<
 
-%_rs.o: src/%.rs
+$(OBJDIR)/%_rs.o: src/%.rs
 	@echo "    RS\t$<"
 	@rustc $(RSFLAGS) $< -o $@
 
-%_fasm.o: src/%.fasm
+$(OBJDIR)/%_fasm.o: src/%.fasm
 	@echo "    FA\t$<"
 	@fasm $< $@ > /dev/null
 
-mrproper:
-	@echo "    RM\t$(OBJECTS)"
-	@rm -f *.o
-
-clean: mrproper
+clean:
 	@clear
 	@echo "    RM\tkernel.elf"
 	@rm -f kernel.elf

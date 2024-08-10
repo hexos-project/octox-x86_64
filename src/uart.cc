@@ -12,7 +12,7 @@ void uart::puthex(u64 n)
     }
     buf[16] = 0;
     char *p = buf;
-    while (*p++ == '0');
+    // while (*p++ == '0');
     uart::puts(p);
 }
 

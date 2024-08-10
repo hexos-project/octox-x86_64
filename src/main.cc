@@ -53,7 +53,11 @@ void cxx_main() {
     IDT::load();
     uart::cout << "Done\n";
 
-    uart::cout << " * Testing syscall... ";
-    asm volatile("int $0x80");
+    uart::cout << " * Testing syscall OS::COM::SERIAL::PUTS... ";
+    syscall(COMP_COM_SERIAL_UART_PUTS, (u64)"Hello, world!\n", 0, 0, 0);
+    uart::cout << "Done\n";
+
+    uart::cout << " * Testing syscall OS::SYSFN::BLOCK... ";
+    syscall(COMP_SYSFN_BLOCK, 0, 0, 0, 0);
     uart::cout << "Done\n";
 }

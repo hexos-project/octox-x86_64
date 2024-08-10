@@ -34,7 +34,7 @@ all: config clean $(OBJECTS)
 	@strip $(STRIPFLAGS) kernel.elf
 
 $(OBJDIR)/%_cc.o: src/%.cc
-	@echo "    CC\t$<"
+	@echo "    CX\t$<"
 	@g++ $(CXXFLAGS) -mno-red-zone -c $< -o $@
 
 $(OBJDIR)/%_c.o: src/%.c

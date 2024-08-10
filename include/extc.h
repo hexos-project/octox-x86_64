@@ -9,7 +9,6 @@ extern "C" {
 extern error_t __errno;
 
 #define throw(x) { __errno = x; return; }
-#define on
 #define error(x) if (__errno == x)
 #define err if (__errno)
 #define calm __errno = null

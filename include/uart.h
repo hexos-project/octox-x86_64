@@ -26,9 +26,9 @@ namespace uart {
         ostream& operator<<(u64 n);
         ostream& operator<<(u8 n);
     };
-    void putc(char c);
-    void puts(char *s);
-    void puts(const char *s);
+    void virt putc(char c) WRAP(uart_putc(c));
+    void virt puts(const char *s) WRAP(uart_puts((char*)s));
+    void virt puts(char *s) WRAP(uart_puts(s));
     void puthex(u64 n);
     void puthex(u8 n);
 

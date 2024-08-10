@@ -16,10 +16,14 @@ void uart::puthex(u64 n)
 
 void uart::puthex(u8 n)
 {
-    u8 first = (n >> 4) & 0xF;
-    u8 second = n & 0xF;
-    uart::putc(first > 9 ? 'A' - 10 + first : '0' + first);
-    uart::putc(second > 9 ? 'A' - 10 + second : '0' + second);
+    const char *hex = "0123456789abcdef";
+    char buf[3];
+    int i = 0;
+    for (i = 0; i < 2; i++) {
+        buf[i] = hex[(n >> (4 - 4 * i)) & 0xF];
+    }
+    buf[2] = 0;
+    uart::puts(buf);
 }
 
 uart::ostream uart::cout;

@@ -13,6 +13,7 @@ extern "C" {
     #include <initrd.h>
     #include <config.h>
     #include <bootboot.h>
+    #include <acpi.h>
 
     extern BOOTBOOT bootboot;
 }
@@ -29,6 +30,7 @@ void cxx_main() {
     uart::cout << " * INITRD size: 0x" << bootboot.initrd_size << '\n';
     uart::cout << " * memory map located at " << (u64)&bootboot.mmap.ptr << '\n';
     uart::cout << " * ACPI ID (must be zero): " << (u64)acpi::id() << '\n';
+    uart::cout << " * ACPI CPU count: " << (u64)ACPI_CpuCount << '\n';
 
     initrd = initrd_init(bootboot);
     uart::cout << " * IHC Initialization... ";

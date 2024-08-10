@@ -17,8 +17,8 @@ void *initrd_get(initrd_t initrd, char *fp);
 }
 
 namespace initrd {
-    void stub init(BOOTBOOT bootboot) WRAP(initrd_init(bootboot));
-    stub void *get(initrd_t initrd, char *fp) RWRAP(initrd_get(initrd, fp));
+    void virt init(BOOTBOOT bootboot) WRAP(initrd_init(bootboot));
+    virt void *get(initrd_t initrd, char *fp) RWRAP(initrd_get(initrd, fp));
 }
 
 #endif

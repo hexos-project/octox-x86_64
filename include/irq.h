@@ -15,9 +15,9 @@ void irq_off(u8 irq);
 }
 
 namespace IRQ {
-    void stub on(u8 irq) WRAP(irq_on(irq));
-    void stub off(u8 irq) WRAP(irq_off(irq));
-    void stub all_on() WRAP(irq_all_on());
-    void stub all_off() WRAP(irq_all_off());
+    void virt on(u8 irq) WRAP(irq_on(irq));
+    void virt off(u8 irq) WRAP(irq_off(irq));
+    void virt all_on() WRAP(irq_all_on());
+    void virt all_off() WRAP(irq_all_off());
 };
 #endif

@@ -48,8 +48,8 @@ namespace tar {
     using header_t = tar_header_t;
     using file_t = tar_file_t;
     using tarball_t = tarball_t;
-    void stub readfile(tarball_t tarball, char *fp, char *buff) WRAP(tar_readfile(tarball, fp, buff));
-    stub void * getptr(tarball_t tarball, char *fp) RWRAP(tar_getptr(tarball, fp));
+    void virt readfile(tarball_t tarball, char *fp, char *buff) WRAP(tar_readfile(tarball, fp, buff));
+    virt void * getptr(tarball_t tarball, char *fp) RWRAP(tar_getptr(tarball, fp));
 }
 
 #endif

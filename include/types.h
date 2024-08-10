@@ -54,7 +54,7 @@ typedef char *error_t;
 #define __const __attribute__((const))
 #define __pure __attribute__((pure))
 
-#define stub static inline
+#define virt static inline
 
 #ifdef __cplusplus
 #define nomangle extern "C"

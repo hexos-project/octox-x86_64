@@ -21,8 +21,8 @@ void ihc_set_handler(u8, ihc_handler_t);
 }
 
 namespace IHC {
-    void stub init() WRAP(ihc_init());
-    void stub set_handler(u8 n, ihc_handler_t handler) WRAP(ihc_set_handler(n, handler));
+    void virt init() WRAP(ihc_init());
+    void virt set_handler(u8 n, ihc_handler_t handler) WRAP(ihc_set_handler(n, handler));
     ihc_handler_t default_handler = ihc_default_handler;
 }
 

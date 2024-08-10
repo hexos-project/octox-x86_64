@@ -31,7 +31,7 @@ nomangle {
 }
 
 namespace acpi {
-    u16 stub id() RWRAP(ACPI_CpuID());
+    u16 virt id() RWRAP(ACPI_CpuID());
 }
 
 #endif

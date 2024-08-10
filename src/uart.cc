@@ -4,8 +4,11 @@
 
 void uart::putc(char c)
 {
-    while ((inb(0x3f8+5) & 0x20) == 0);
-    outb(0x3f8, c);
+    u8 status;
+    do {
+        ports::port(0x3f8) >> &status;
+    } while ((status & 0x20) == 0);
+    ports::port(0x3f8) << (u8)c;
 }
 
 void uart::puts(char *s)

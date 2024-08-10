@@ -25,8 +25,8 @@ void idt_load();
 }
 
 namespace IDT {
-    void stub init() WRAP(idt_init());
-    void stub load() WRAP(idt_load());
+    void virt init() WRAP(idt_init());
+    void virt load() WRAP(idt_load());
 }
 
 #endif

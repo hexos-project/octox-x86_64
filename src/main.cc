@@ -51,6 +51,6 @@ void cxx_main() {
     uart::cout << "Done\n";
 
     while (1) {
-        uart::cout << " * Uptime" << (u64)uptime << '\n';
+        uart::cout << " * Uptime " << uptime << '\n';
     }
 }

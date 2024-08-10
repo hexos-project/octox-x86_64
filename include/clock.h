@@ -7,7 +7,7 @@
 extern "C" {
 #endif
 
-extern u128 uptime;
+extern u64 uptime;
 
 void clock_ihc_handler(u8 n);
 

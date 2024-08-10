@@ -7,6 +7,7 @@
 #include <config.h>
 #include <initrd.h>
 #include <ihc.h>
+#include <pit.h>
 
 extern BOOTBOOT bootboot;
 
@@ -27,6 +28,9 @@ void cxx_main() {
     uart::cout << "Done\n";
     uart::cout << " * IDT Initialization... ";
     IDT::init();
+    uart::cout << "Done\n";
+    uart::cout << " * PIT Initialization... ";
+    PIT::init(10);
     uart::cout << "Done\n";
     uart::cout << " * Disabling IRQs... ";
     IRQ::all_off();

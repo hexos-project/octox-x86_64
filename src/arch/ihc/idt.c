@@ -1,5 +1,6 @@
 #include <idt.h>
 #include <ihc.h>
+#include <ports.h>
 
 #define SETUP_IDT(n) \
     idt[n].offset_1 = ((uintn)ihc##n) & 0xffff; \
@@ -12,6 +13,23 @@
 intd_t idt[256];
 
 void idt_load() {
+    // ICW1 - init
+    outb(0x20, 0b00010001);
+    outb(0xA0, 0b00010001);
+
+    // ICW2 - reset offset address if IDT
+    // first 32 interrpts are reserved
+    outb(0x21, 0x20);
+    outb(0xA1, 0x28);
+
+    // ICW3 - setup cascading
+    outb(0x21, 0b00000100);
+    outb(0xA1, 0b00000100);
+
+    // ICW4 - env info
+    outb(0x21, 0b00000011);
+    outb(0xA1, 0b00000011);
+
     struct {
         uint16_t limit;
         uint64_t base;

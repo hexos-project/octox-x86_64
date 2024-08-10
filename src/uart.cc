@@ -4,7 +4,7 @@
 
 void uart::puthex(u64 n)
 {
-    const char *hex = "0123456789abcdef";
+    const char *hex = "0123456789ABCDEF";
     char buf[17];
     int i = 0;
     for (i = 0; i < 16; i++) {

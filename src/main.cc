@@ -24,28 +24,32 @@ void cxx_main() {
     uart::cout << " * INITRD Initialization... ";
     initrd::init(bootboot);
     uart::cout << "Done\n";
+
     uart::cout << " * IHC Initialization... ";
     IHC::init();
     uart::cout << "Done\n";
+
     uart::cout << " * IDT Initialization... ";
     IDT::init();
     uart::cout << "Done\n";
-    uart::cout << " * PIT Initialization... ";
-    PIT::init(10);
+
+    uart::cout << " * PIT Initialization, 1 MHz... ";
+    PIT::init(1000000);
     uart::cout << "Done\n";
+
     uart::cout << " * Disabling IRQs... ";
     IRQ::all_off();
     uart::cout << "Done\n";
+
     uart::cout << " * Setting up IDTR... ";
     IDT::load();
     uart::cout << "Done\n";
-    uart::cout << " * Enabling INT 0x80... ";
-    IRQ::on(0x80);
-    uart::cout << "Done\n";
+
     uart::cout << " * Setting up clock... ";
-    // IHC::set_handler(0x23, clock_ihc_handler);
+    IHC::set_handler(0x23, clock_ihc_handler);
     uart::cout << "Done\n";
-    uart::cout << " * Enabling INT 0x08... ";
-    IRQ::on(0x08);
+
+    uart::cout << " * Enabling interrupts... ";
+    IRQ::all_on();
     uart::cout << "Done\n";
 }

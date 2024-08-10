@@ -16,7 +16,7 @@ void uart::puthex(u64 n)
 
 void uart::puthex(u8 n)
 {
-    const char *hex = "0123456789abcdef";
+    const char *hex = "0123456789ABCDEF";
     char buf[3];
     int i = 0;
     for (i = 0; i < 2; i++) {
@@ -52,14 +52,14 @@ uart::ostream& uart::ostream::operator<<(const char *s)
 
 uart::ostream& uart::ostream::operator<<(u64 n)
 {
-    uart::puts("0x");
+    uart::puts("@");
     uart::puthex(n);
     return *this;
 }
 
 uart::ostream& uart::ostream::operator<<(u8 n)
 {
-    uart::puts("0x");
+    uart::puts("@");
     uart::puthex(n);
     return *this;
 }

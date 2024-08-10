@@ -23,7 +23,7 @@ void test_acpi() {
 void _start() {
     ACPI_Register();
 
-    ACPI_SendCommand(2, ACPI_CALL, (u64)test_acpi, 0, 0, 0);
+    if (ACPI_CpuID()) while (1); // i will work on this later
 
     gas_hello();
 

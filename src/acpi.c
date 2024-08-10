@@ -42,6 +42,5 @@ void ACPI_SendCommand(u8 cpuid, u8 cmd, u64 a, u64 b, u64 c, u64 d) {
 void ACPI_Register() {
     ACPI_CmdBuffer[0] = -1;
     ACPI_CmdBuffer[1] = ACPI_NOP;
-    ACPI_CpuCount = ACPI_CpuCount < ACPI_CpuID() ? ACPI_CpuID() : ACPI_CpuCount;
-    if (ACPI_CpuID()) ACPI_CmdCenter();
+    ACPI_CpuCount++;
 }

@@ -8,5 +8,5 @@ nomangle {
 }
 
 namespace acpi {
-    u16 stub id() RWRAP(ACPI_CoreID());
+    u16 stub id() RWRAP(ACPI_CpuID());
 }

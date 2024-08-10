@@ -16,8 +16,14 @@ extern BOOTBOOT bootboot;
 extern unsigned char environment[4096];
 extern u32 fb;
 
+void test_acpi() {
+    uart_puts(" * ACPI test\n");
+}
+
 void _start() {
-    if (ACPI_CoreID()) while (1);
+    ACPI_Register();
+
+    ACPI_SendCommand(2, ACPI_CALL, (u64)test_acpi, 0, 0, 0);
 
     gas_hello();
 

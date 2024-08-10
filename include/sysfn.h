@@ -7,7 +7,7 @@
 extern "C" {
 #endif
 
-void sysfn_handler(u8 n);
+void sysfn_ihc_handler(u8 n);
 
 #ifdef __cplusplus
 }

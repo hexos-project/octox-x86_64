@@ -9,6 +9,7 @@
 #include <ihc.h>
 #include <pit.h>
 #include <clock.h>
+#include <sysfn.h>
 
 extern BOOTBOOT bootboot;
 
@@ -45,12 +46,14 @@ void cxx_main() {
 
     uart::cout << "   * INT 0x23 IRQ clock\n";
     IHC::set_handler(0x23, clock_ihc_handler);
+    uart::cout << "   * INT 0x80 Syscall\n";
+    IHC::set_handler(0x80, sysfn_ihc_handler);
 
     uart::cout << " * Loading IDT... ";
     IDT::load();
     uart::cout << "Done\n";
 
-    while (1) {
-        uart::cout << " * Uptime " << uptime << '\n';
-    }
+    uart::cout << " * Testing syscall... ";
+    asm volatile("int $0x80");
+    uart::cout << "Done\n";
 }

@@ -45,8 +45,21 @@ void cxx_main() {
 
     uart::cout << "   * INT 0x23 IRQ clock\n";
     IHC::set_handler(0x23, clock_ihc_handler);
-    IRQ::on(0x23);
+    IRQ::on(0x20);
+    IRQ::on(0x21);
+    IRQ::on(0x22);
     IRQ::on(0x24);
+    IRQ::on(0x25);
+    IRQ::on(0x26);
+    IRQ::on(0x27);
+    IRQ::on(0x28);
+    IRQ::on(0x29);
+    IRQ::on(0x2A);
+    IRQ::on(0x2B);
+    IRQ::on(0x2C);
+    IRQ::on(0x2D);
+    IRQ::on(0x2E);
+    IRQ::on(0x2F);
 
     uart::cout << " * Loading IDT... ";
     IDT::load();

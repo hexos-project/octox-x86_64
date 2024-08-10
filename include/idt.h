@@ -17,6 +17,7 @@ typedef struct {
 
 extern intd_t idt[256];
 
+u16 get_cs(void);
 void idt_init();
 void idt_ihc_update();
 void idt_load();

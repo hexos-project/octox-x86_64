@@ -59,6 +59,9 @@ typedef char *error_t;
 #define __const __attribute__((const))
 #define __pure __attribute__((pure))
 
+// fastcall
+#define __fastcall __attribute__((fastcall))
+
 #define virt static inline
 
 #ifdef __cplusplus

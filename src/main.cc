@@ -21,6 +21,7 @@ void cxx_main() {
     uart::cout << " * memory map located at " << (u64)&bootboot.mmap.ptr << '\n';
     uart::cout << " * ACPI ID (must be zero): " << (u8)acpi::id() << '\n';
     uart::cout << " * ACPI CPU count: " << (u8)ACPI_CpuCount << '\n';
+    uart::cout << " * CS Value: " << (u64)get_cs() << '\n';
 
     uart::cout << " * INITRD Initialization... ";
     initrd::init(bootboot);

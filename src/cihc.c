@@ -3,16 +3,13 @@
 
 #define IHC_HANDLER(n) \
 void ihc##n##_handler(void) { \
-    if (ihc_handlers[n] == NULL) return; \
     ihc_handlers[n](n); \
 }
 
 ihc_handler_t ihc_handlers[256];
 
 void ihc_init(void) {
-    for (int i = 0; i < 256; i++) {
-        ihc_handlers[i] = (ihc_handler_t)ihc_default_handler;
-    }
+    for (int i = 0; i < 256; i++) ihc_handlers[i] = (ihc_handler_t)ihc_default_handler;
 }
 
 void ihc_set_handler(u8 n, ihc_handler_t handler) {

@@ -11,8 +11,7 @@ void uart::putc(char c)
 void uart::puts(char *s)
 {
     while (*s) {
-        putc(*s);
-        s++;
+        putc(*s++);
     }
 }
 

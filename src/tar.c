@@ -32,6 +32,7 @@ void *tar_getptr(tarball_t tarball, char *fp) {
     throw("file not found");
 }
 
+/*
 void print_tarball_header(tar_file_t *file) {
     // print all the header fields
     uart_puts("name: "); uart_puts(file->header.name); uart_puts("\n");
@@ -50,8 +51,9 @@ void print_tarball_header(tar_file_t *file) {
     uart_puts("devmajor: "); uart_puts(file->header.devmajor); uart_puts("\n");
     uart_puts("devminor: "); uart_puts(file->header.devminor); uart_puts("\n");
     uart_puts("prefix: "); uart_puts(file->header.prefix); uart_puts("\n\n");
-}
+} */
 
+/*
 tarball_t next_tarball(tarball_t tarball) {
     size_t size = otoi(tarball->header.size);
     tarball += ceil(size, 512) / 512 + 1;
@@ -63,8 +65,9 @@ tarball_t next_tarball(tarball_t tarball) {
     if (tarball->header.name[0] == '\0')
         return NULL;
     return tarball;
-}
+} */
 
+/*
 tarball_t filter_buggy_tarball(tarball_t tarball) {
     // it name ends with "."
     if (tarball == NULL)
@@ -79,8 +82,9 @@ tarball_t filter_buggy_tarball(tarball_t tarball) {
     }
     uart_puts("Not Filter!\n");
     return tarball;
-}
+} */
 
+/*
 void list_tarball(tarball_t tarball) {
     while (tarball != NULL) {
         tarball = filter_buggy_tarball(tarball);
@@ -90,4 +94,4 @@ void list_tarball(tarball_t tarball) {
         tarball = next_tarball(tarball);
     }
     uart_puts("Done!\n");
-}
+} */

@@ -3,6 +3,8 @@
 #include <string.h>
 #include <memory.h>
 
+/*
+
 char cpuidBrandString[25];
 
 char *cpuid_getCpuidBrandString() {
@@ -26,4 +28,4 @@ char *cpuid_getCpuidBrandString() {
     memcpy(cpuidBrandString + 20, &ecx, 4);
     cpuidBrandString[24] = '\0';
     return cpuidBrandString;
-}
+} */

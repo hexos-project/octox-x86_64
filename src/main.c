@@ -16,10 +16,6 @@ extern BOOTBOOT bootboot;
 extern unsigned char environment[4096];
 extern u32 fb;
 
-void test_acpi() {
-    uart_puts("\n * ACPI test\n");
-}
-
 void _start() {
     ACPI_Register();
 

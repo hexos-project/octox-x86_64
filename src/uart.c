@@ -11,8 +11,7 @@ void uart_putc(char c)
 void uart_puts(char *s)
 {
     while (*s) {
-        uart_putc(*s);
-        s++;
+        uart_putc(*s++);
     }
 }
 
@@ -25,11 +24,10 @@ void uart_puthex(u64 val)
 
 void uart_puthexb(u8 val)
 {
-    char buf[17];
-    for (int i = 0; i < 17; i++)
-        buf[i] = 0;
+    char buf[3];
+    for (int i = 0; i < 3; i++) buf[i] = 0;
     itoh(val, buf);
-    uart_puts(buf+16);
+    uart_puts(buf+2);
 }
 
 void uart_putdec(u32 val)

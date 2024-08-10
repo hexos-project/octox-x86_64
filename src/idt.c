@@ -23,7 +23,6 @@ void idt_load() {
 }
 
 u16 get_cs(void) {
-    return 8;
     u16 cs;
     asm volatile("mov %%cs, %0" : "=r"(cs));
     return cs;

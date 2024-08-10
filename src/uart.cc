@@ -33,14 +33,8 @@ void uart::puthex(u64 n)
 
 void uart::puthex(u8 n)
 {
-    const char *hex = "0123456789abcdef";
-    char buf[3];
-    int i = 0;
-    for (i = 0; i < 2; i++) {
-        buf[i] = hex[(n >> (60 - 4 * i)) & 0xF];
-    }
-    buf[2] = 0;
-    uart::puts(buf);
+    uart::putc((n >> 4) & 0xF > 9 ? 'A' - 10 : '0' + (n >> 4) & 0xF);
+    uart::putc(n & 0xF > 9 ? 'A' - 10 : '0' + n & 0xF);
 }
 
 uart::ostream uart::cout;

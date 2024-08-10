@@ -1118,10 +1118,10 @@ ihc113:
     iretq
 
 .global ihc114
-.extern ihc114_handler
+.extern sysfn_ihc_handler
 ihc114:
     cli
-    call ihc114_handler
+    call sysfn_ihc_handler
     sti
     movb $20, %al
     outb %al, $20

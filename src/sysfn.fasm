@@ -1,0 +1,16 @@
+format ELF64
+
+public _syscall
+
+section '.text' executable
+
+; rdi
+; rsi
+; rdx
+; rcx
+; r8
+; r9
+
+_syscall:
+    int 0x80
+    ret

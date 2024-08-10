@@ -54,10 +54,14 @@ void cxx_main() {
     uart::cout << "Done\n";
 
     uart::cout << " * Testing syscall OS::COM::SERIAL::PUTS... ";
-    syscall(COMP_COM_SERIAL_UART_PUTS, (u64)"Hello, world!\n", 0, 0, 0);
+    _syscall(COMP_COM_SERIAL_UART_PUTS, (u64)"Hello, world!\n", 0, 0, 0);
     uart::cout << "Done\n";
 
     uart::cout << " * Testing syscall OS::SYSFN::BLOCK... ";
-    syscall(COMP_SYSFN_BLOCK, 0, 0, 0, 0);
+    _syscall(COMP_SYSFN_BLOCK, 0, 0, 0, 0);
+    uart::cout << "Done\n";
+
+    uart::cout << " * Testing syscall block... ";
+    _syscall(COMP_COM_SERIAL_UART_PUTS, (u64)"Hello, world!\n", 0, 0, 0);
     uart::cout << "Done\n";
 }

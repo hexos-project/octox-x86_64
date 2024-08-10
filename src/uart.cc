@@ -16,8 +16,10 @@ void uart::puthex(u64 n)
 
 void uart::puthex(u8 n)
 {
-    uart::putc((n >> 4) & 0xF > 9 ? 'A' - 10 + n : '0' + (n >> 4) & 0xF);
-    uart::putc(n & 0xF > 9 ? 'A' - 10 + n : '0' + n & 0xF);
+    u8 first = (n >> 4) & 0xF;
+    u8 second = n & 0xF;
+    uart::putc(first > 9 ? 'A' - 10 + first : '0' + first);
+    uart::putc(second > 9 ? 'A' - 10 + second : '0' + second);
 }
 
 uart::ostream uart::cout;

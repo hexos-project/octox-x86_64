@@ -1,8 +1,8 @@
 #include <ihc.h>
 
 #define IHC_HANDLER(n) \
-void ihc##n##_handler(void) { \
-    ihc_handlers[n](n); \
+void __naked ihc##n##_handler(void) { \
+    goto *ihc_handlers[n]; \
 }
 
 IHC_HANDLER(0)

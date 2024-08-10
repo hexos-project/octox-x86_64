@@ -62,6 +62,9 @@ typedef char *error_t;
 // fastcall
 #define __fastcall __attribute__((fastcall))
 
+// naked
+#define __naked __attribute__((naked))
+
 #define virt static inline
 
 #ifdef __cplusplus

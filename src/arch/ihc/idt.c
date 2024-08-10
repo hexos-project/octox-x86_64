@@ -10,7 +10,7 @@
     idt[n].offset_2 = (((uintn) ihc##n) >> 16) & 0xffff; \
     idt[n].offset_3 = ((uintn) ihc##n) >> 32;
 
-intd_t idt[256];
+intd_t idt[256] = {0};
 
 void idt_load() {
     // ICW1 - init

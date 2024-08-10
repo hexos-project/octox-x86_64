@@ -15,9 +15,9 @@ extern unsigned char environment[4096];
 extern u32 fb;
 
 void _start() {
-    ACPI_Register();
-
     if (ACPI_CpuID()) while (1); // i will work on this later
+
+    ACPI_Init();
 
     gas_hello();
     c_hello();

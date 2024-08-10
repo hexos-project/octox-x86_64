@@ -1,4 +1,7 @@
 #include <acpi.h>
+#include <bootboot.h>
+
+extern BOOTBOOT bootboot;
 
 u64 ACPI_CmdBuffer[ACPI_CMD_BUFFER_SIZE];
 u16 ACPI_CpuCount;
@@ -35,6 +38,6 @@ void ACPI_SendCommand(u8 cpuid, u8 cmd, u64 a, u64 b, u64 c, u64 d) {
     ACPI_CmdBuffer[5] = d;
 }
 
-void ACPI_Register() {
-    ACPI_CpuCount++;
+void ACPI_Init() {
+    ACPI_CpuCount = bootboot.numcores;
 }

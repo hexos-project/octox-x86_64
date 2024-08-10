@@ -21,7 +21,7 @@ extern u16 ACPI_CpuCount;
 u16 ACPI_CpuID();
 void ACPI_CmdCenter();
 void ACPI_SendCommand(u8 cpuid, u8 cmd, u64 a, u64 b, u64 c, u64 d);
-void ACPI_Register();
+void ACPI_Init();
 
 #ifdef __cplusplus
 }

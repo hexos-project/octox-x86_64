@@ -35,7 +35,7 @@ void cxx_main() {
     uart::cout << "Done\n";
 
     uart::cout << " * PIT Initialization, 1 MHz... ";
-    PIT::init(1000);
+    PIT::init(100);
     uart::cout << "Done\n";
 
     uart::cout << " * Disabling IRQs... ";

@@ -41,13 +41,13 @@ void cxx_main() {
     IRQ::all_off();
     uart::cout << "Done\n";
 
-    uart::cout << " * Setting up IDTR... ";
-    IDT::load();
-    uart::cout << "Done\n";
-
     uart::cout << " * Enabling interrupts:\n";
 
     uart::cout << "   * INT 0x23 IRQ clock\n";
     IHC::set_handler(0x23, clock_ihc_handler);
     IRQ::on(0x23);
+
+    uart::cout << " * Loading IDT... ";
+    IDT::load();
+    uart::cout << "Done\n";
 }

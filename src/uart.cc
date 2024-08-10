@@ -11,7 +11,9 @@ void uart::puthex(u64 n)
         buf[i] = hex[(n >> (60 - 4 * i)) & 0xF];
     }
     buf[16] = 0;
-    uart::puts(buf);
+    char *p = buf;
+    while (*p++ == '0');
+    uart::puts(p);
 }
 
 void uart::puthex(u8 n)

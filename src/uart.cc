@@ -6,7 +6,7 @@ void uart::putc(char c)
 {
     u8 status;
     do {
-        ports::port(0x3f8) >> &status;
+        status = inb(0x3f8);
     } while ((status & 0x20) == 0);
     ports::port(0x3f8) << (u8)c;
 }

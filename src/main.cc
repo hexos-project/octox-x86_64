@@ -37,7 +37,7 @@ void cxx_main() {
     uart::cout << " * Enabling INT 0x80... ";
     IRQ::on(0x80);
     uart::cout << "Done\n";
-    uart::cout << " * Testing INT 0x80... ";
-    asm volatile("int $0x80");
+    uart::cout << " * Enabling INT 0x08... ";
+    IRQ::on(0x08);
     uart::cout << "Done\n";
 }

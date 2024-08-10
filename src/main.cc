@@ -8,6 +8,7 @@
 #include <initrd.h>
 #include <ihc.h>
 #include <pit.h>
+#include <clock.h>
 
 extern BOOTBOOT bootboot;
 
@@ -40,6 +41,9 @@ void cxx_main() {
     uart::cout << "Done\n";
     uart::cout << " * Enabling INT 0x80... ";
     IRQ::on(0x80);
+    uart::cout << "Done\n";
+    uart::cout << " * Setting up clock... ";
+    IHC::set_handler(0x23, clock_ihc_handler);
     uart::cout << "Done\n";
     uart::cout << " * Enabling INT 0x08... ";
     IRQ::on(0x08);

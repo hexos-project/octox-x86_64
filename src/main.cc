@@ -43,7 +43,7 @@ void cxx_main() {
     IRQ::on(0x80);
     uart::cout << "Done\n";
     uart::cout << " * Setting up clock... ";
-    IHC::set_handler(0x23, clock_ihc_handler);
+    // IHC::set_handler(0x23, clock_ihc_handler);
     uart::cout << "Done\n";
     uart::cout << " * Enabling INT 0x08... ";
     IRQ::on(0x08);

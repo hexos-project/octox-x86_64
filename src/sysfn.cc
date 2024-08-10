@@ -14,7 +14,7 @@
 static bool __justexit = false;
 
 nomangle
-void sysfn_ihc_handler(u8 n, u64 component, u64 arg1, u64 arg2, u64 arg3, u64 arg4) {
+void sysfn_ihc_handler(u64 component, u64 arg1, u64 arg2, u64 arg3, u64 arg4) {
     uart::cout << " * syscall invoked\n";
     if (__justexit) {
         uart::cout << " * syscall: blocked\n";

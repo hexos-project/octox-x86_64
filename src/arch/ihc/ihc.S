@@ -3,9 +3,9 @@
 ihc0:
     cli
     call ihc0_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc1
@@ -13,9 +13,9 @@ ihc0:
 ihc1:
     cli
     call ihc1_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc2
@@ -23,9 +23,9 @@ ihc1:
 ihc2:
     cli
     call ihc2_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc3
@@ -33,9 +33,9 @@ ihc2:
 ihc3:
     cli
     call ihc3_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc4
@@ -43,9 +43,9 @@ ihc3:
 ihc4:
     cli
     call ihc4_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc5
@@ -53,9 +53,9 @@ ihc4:
 ihc5:
     cli
     call ihc5_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc6
@@ -63,9 +63,9 @@ ihc5:
 ihc6:
     cli
     call ihc6_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc7
@@ -73,9 +73,9 @@ ihc6:
 ihc7:
     cli
     call ihc7_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc8
@@ -83,9 +83,9 @@ ihc7:
 ihc8:
     cli
     call ihc8_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc9
@@ -93,9 +93,9 @@ ihc8:
 ihc9:
     cli
     call ihc9_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc10
@@ -103,9 +103,9 @@ ihc9:
 ihc10:
     cli
     call ihc10_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc11
@@ -113,9 +113,9 @@ ihc10:
 ihc11:
     cli
     call ihc11_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc12
@@ -123,9 +123,9 @@ ihc11:
 ihc12:
     cli
     call ihc12_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc13
@@ -133,9 +133,9 @@ ihc12:
 ihc13:
     cli
     call ihc13_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc14
@@ -143,9 +143,9 @@ ihc13:
 ihc14:
     cli
     call ihc14_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc15
@@ -153,9 +153,9 @@ ihc14:
 ihc15:
     cli
     call ihc15_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc16
@@ -163,9 +163,9 @@ ihc15:
 ihc16:
     cli
     call ihc16_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc17
@@ -173,9 +173,9 @@ ihc16:
 ihc17:
     cli
     call ihc17_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc18
@@ -183,9 +183,9 @@ ihc17:
 ihc18:
     cli
     call ihc18_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc19
@@ -193,9 +193,9 @@ ihc18:
 ihc19:
     cli
     call ihc19_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc20
@@ -203,9 +203,9 @@ ihc19:
 ihc20:
     cli
     call ihc20_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc21
@@ -213,9 +213,9 @@ ihc20:
 ihc21:
     cli
     call ihc21_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc22
@@ -223,9 +223,9 @@ ihc21:
 ihc22:
     cli
     call ihc22_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc23
@@ -233,9 +233,9 @@ ihc22:
 ihc23:
     cli
     call ihc23_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc24
@@ -243,9 +243,9 @@ ihc23:
 ihc24:
     cli
     call ihc24_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc25
@@ -253,9 +253,9 @@ ihc24:
 ihc25:
     cli
     call ihc25_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc26
@@ -263,9 +263,9 @@ ihc25:
 ihc26:
     cli
     call ihc26_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc27
@@ -273,9 +273,9 @@ ihc26:
 ihc27:
     cli
     call ihc27_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc28
@@ -283,9 +283,9 @@ ihc27:
 ihc28:
     cli
     call ihc28_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc29
@@ -293,9 +293,9 @@ ihc28:
 ihc29:
     cli
     call ihc29_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc30
@@ -303,9 +303,9 @@ ihc29:
 ihc30:
     cli
     call ihc30_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc31
@@ -313,9 +313,9 @@ ihc30:
 ihc31:
     cli
     call ihc31_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc32
@@ -338,9 +338,9 @@ ihc34:
 ihc35:
     cli
     call ihc35_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc36
@@ -348,9 +348,9 @@ ihc35:
 ihc36:
     cli
     call ihc36_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc37
@@ -358,9 +358,9 @@ ihc36:
 ihc37:
     cli
     call ihc37_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc38
@@ -368,9 +368,9 @@ ihc37:
 ihc38:
     cli
     call ihc38_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc39
@@ -378,9 +378,9 @@ ihc38:
 ihc39:
     cli
     call ihc39_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc40
@@ -388,9 +388,9 @@ ihc39:
 ihc40:
     cli
     call ihc40_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc41
@@ -398,9 +398,9 @@ ihc40:
 ihc41:
     cli
     call ihc41_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc42
@@ -408,33 +408,33 @@ ihc41:
 ihc42:
     cli
     call ihc42_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc43
 .extern ihc43_handler
 ihc43:
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc44
 .extern ihc44_handler
 ihc44:
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc45
 .extern ihc45_handler
 ihc45:
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc46
@@ -442,9 +442,9 @@ ihc45:
 ihc46:
     cli
     call ihc46_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc47
@@ -452,9 +452,9 @@ ihc46:
 ihc47:
     cli
     call ihc47_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc48
@@ -462,9 +462,9 @@ ihc47:
 ihc48:
     cli
     call ihc48_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc49
@@ -472,9 +472,9 @@ ihc48:
 ihc49:
     cli
     call ihc49_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc50
@@ -482,9 +482,9 @@ ihc49:
 ihc50:
     cli
     call ihc50_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc51
@@ -492,9 +492,9 @@ ihc50:
 ihc51:
     cli
     call ihc51_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc52
@@ -502,9 +502,9 @@ ihc51:
 ihc52:
     cli
     call ihc52_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc53
@@ -512,9 +512,9 @@ ihc52:
 ihc53:
     cli
     call ihc53_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc54
@@ -522,9 +522,9 @@ ihc53:
 ihc54:
     cli
     call ihc54_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc55
@@ -532,9 +532,9 @@ ihc54:
 ihc55:
     cli
     call ihc55_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc56
@@ -542,9 +542,9 @@ ihc55:
 ihc56:
     cli
     call ihc56_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc57
@@ -552,9 +552,9 @@ ihc56:
 ihc57:
     cli
     call ihc57_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc58
@@ -562,9 +562,9 @@ ihc57:
 ihc58:
     cli
     call ihc58_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc59
@@ -572,9 +572,9 @@ ihc58:
 ihc59:
     cli
     call ihc59_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc60
@@ -582,9 +582,9 @@ ihc59:
 ihc60:
     cli
     call ihc60_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc61
@@ -592,9 +592,9 @@ ihc60:
 ihc61:
     cli
     call ihc61_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc62
@@ -602,9 +602,9 @@ ihc61:
 ihc62:
     cli
     call ihc62_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc63
@@ -612,9 +612,9 @@ ihc62:
 ihc63:
     cli
     call ihc63_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc64
@@ -622,9 +622,9 @@ ihc63:
 ihc64:
     cli
     call ihc64_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc65
@@ -632,9 +632,9 @@ ihc64:
 ihc65:
     cli
     call ihc65_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc66
@@ -642,9 +642,9 @@ ihc65:
 ihc66:
     cli
     call ihc66_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc67
@@ -652,9 +652,9 @@ ihc66:
 ihc67:
     cli
     call ihc67_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc68
@@ -662,9 +662,9 @@ ihc67:
 ihc68:
     cli
     call ihc68_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc69
@@ -672,9 +672,9 @@ ihc68:
 ihc69:
     cli
     call ihc69_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc70
@@ -682,9 +682,9 @@ ihc69:
 ihc70:
     cli
     call ihc70_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc71
@@ -692,9 +692,9 @@ ihc70:
 ihc71:
     cli
     call ihc71_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc72
@@ -702,9 +702,9 @@ ihc71:
 ihc72:
     cli
     call ihc72_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc73
@@ -712,9 +712,9 @@ ihc72:
 ihc73:
     cli
     call ihc73_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc74
@@ -722,9 +722,9 @@ ihc73:
 ihc74:
     cli
     call ihc74_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc75
@@ -732,9 +732,9 @@ ihc74:
 ihc75:
     cli
     call ihc75_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc76
@@ -742,9 +742,9 @@ ihc75:
 ihc76:
     cli
     call ihc76_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc77
@@ -752,9 +752,9 @@ ihc76:
 ihc77:
     cli
     call ihc77_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc78
@@ -762,9 +762,9 @@ ihc77:
 ihc78:
     cli
     call ihc78_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc79
@@ -772,9 +772,9 @@ ihc78:
 ihc79:
     cli
     call ihc79_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc80
@@ -782,9 +782,9 @@ ihc79:
 ihc80:
     cli
     call ihc80_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc81
@@ -792,9 +792,9 @@ ihc80:
 ihc81:
     cli
     call ihc81_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc82
@@ -802,9 +802,9 @@ ihc81:
 ihc82:
     cli
     call ihc82_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc83
@@ -812,9 +812,9 @@ ihc82:
 ihc83:
     cli
     call ihc83_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc84
@@ -822,9 +822,9 @@ ihc83:
 ihc84:
     cli
     call ihc84_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc85
@@ -832,9 +832,9 @@ ihc84:
 ihc85:
     cli
     call ihc85_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc86
@@ -842,9 +842,9 @@ ihc85:
 ihc86:
     cli
     call ihc86_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc87
@@ -852,9 +852,9 @@ ihc86:
 ihc87:
     cli
     call ihc87_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc88
@@ -862,9 +862,9 @@ ihc87:
 ihc88:
     cli
     call ihc88_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc89
@@ -872,9 +872,9 @@ ihc88:
 ihc89:
     cli
     call ihc89_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc90
@@ -882,9 +882,9 @@ ihc89:
 ihc90:
     cli
     call ihc90_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc91
@@ -892,9 +892,9 @@ ihc90:
 ihc91:
     cli
     call ihc91_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc92
@@ -902,9 +902,9 @@ ihc91:
 ihc92:
     cli
     call ihc92_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc93
@@ -912,9 +912,9 @@ ihc92:
 ihc93:
     cli
     call ihc93_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc94
@@ -922,9 +922,9 @@ ihc93:
 ihc94:
     cli
     call ihc94_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc95
@@ -932,9 +932,9 @@ ihc94:
 ihc95:
     cli
     call ihc95_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc96
@@ -942,9 +942,9 @@ ihc95:
 ihc96:
     cli
     call ihc96_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc97
@@ -952,9 +952,9 @@ ihc96:
 ihc97:
     cli
     call ihc97_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc98
@@ -962,9 +962,9 @@ ihc97:
 ihc98:
     cli
     call ihc98_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc99
@@ -972,9 +972,9 @@ ihc98:
 ihc99:
     cli
     call ihc99_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc100
@@ -982,9 +982,9 @@ ihc99:
 ihc100:
     cli
     call ihc100_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc101
@@ -992,9 +992,9 @@ ihc100:
 ihc101:
     cli
     call ihc101_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc102
@@ -1002,9 +1002,9 @@ ihc101:
 ihc102:
     cli
     call ihc102_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc103
@@ -1012,9 +1012,9 @@ ihc102:
 ihc103:
     cli
     call ihc103_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc104
@@ -1022,9 +1022,9 @@ ihc103:
 ihc104:
     cli
     call ihc104_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc105
@@ -1032,9 +1032,9 @@ ihc104:
 ihc105:
     cli
     call ihc105_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc106
@@ -1042,9 +1042,9 @@ ihc105:
 ihc106:
     cli
     call ihc106_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc107
@@ -1052,9 +1052,9 @@ ihc106:
 ihc107:
     cli
     call ihc107_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc108
@@ -1062,9 +1062,9 @@ ihc107:
 ihc108:
     cli
     call ihc108_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc109
@@ -1072,9 +1072,9 @@ ihc108:
 ihc109:
     cli
     call ihc109_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc110
@@ -1082,9 +1082,9 @@ ihc109:
 ihc110:
     cli
     call ihc110_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc111
@@ -1092,9 +1092,9 @@ ihc110:
 ihc111:
     cli
     call ihc111_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc112
@@ -1102,9 +1102,9 @@ ihc111:
 ihc112:
     cli
     call ihc112_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc113
@@ -1112,9 +1112,9 @@ ihc112:
 ihc113:
     cli
     call ihc113_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc114
@@ -1122,9 +1122,9 @@ ihc113:
 ihc114:
     cli
     call sysfn_ihc_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc115
@@ -1132,9 +1132,9 @@ ihc114:
 ihc115:
     cli
     call ihc115_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc116
@@ -1142,9 +1142,9 @@ ihc115:
 ihc116:
     cli
     call ihc116_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc117
@@ -1152,9 +1152,9 @@ ihc116:
 ihc117:
     cli
     call ihc117_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc118
@@ -1162,9 +1162,9 @@ ihc117:
 ihc118:
     cli
     call ihc118_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc119
@@ -1172,9 +1172,9 @@ ihc118:
 ihc119:
     cli
     call ihc119_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc120
@@ -1182,9 +1182,9 @@ ihc119:
 ihc120:
     cli
     call ihc120_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc121
@@ -1192,9 +1192,9 @@ ihc120:
 ihc121:
     cli
     call ihc121_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc122
@@ -1202,9 +1202,9 @@ ihc121:
 ihc122:
     cli
     call ihc122_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc123
@@ -1212,9 +1212,9 @@ ihc122:
 ihc123:
     cli
     call ihc123_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc124
@@ -1222,9 +1222,9 @@ ihc123:
 ihc124:
     cli
     call ihc124_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc125
@@ -1232,9 +1232,9 @@ ihc124:
 ihc125:
     cli
     call ihc125_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc126
@@ -1242,9 +1242,9 @@ ihc125:
 ihc126:
     cli
     call ihc126_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc127
@@ -1252,9 +1252,9 @@ ihc126:
 ihc127:
     cli
     call ihc127_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc128
@@ -1262,9 +1262,9 @@ ihc127:
 ihc128:
     cli
     call ihc128_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc129
@@ -1272,9 +1272,9 @@ ihc128:
 ihc129:
     cli
     call ihc129_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc130
@@ -1282,9 +1282,9 @@ ihc129:
 ihc130:
     cli
     call ihc130_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc131
@@ -1292,9 +1292,9 @@ ihc130:
 ihc131:
     cli
     call ihc131_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc132
@@ -1302,9 +1302,9 @@ ihc131:
 ihc132:
     cli
     call ihc132_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc133
@@ -1312,9 +1312,9 @@ ihc132:
 ihc133:
     cli
     call ihc133_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc134
@@ -1322,9 +1322,9 @@ ihc133:
 ihc134:
     cli
     call ihc134_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc135
@@ -1332,9 +1332,9 @@ ihc134:
 ihc135:
     cli
     call ihc135_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc136
@@ -1342,9 +1342,9 @@ ihc135:
 ihc136:
     cli
     call ihc136_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc137
@@ -1352,9 +1352,9 @@ ihc136:
 ihc137:
     cli
     call ihc137_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc138
@@ -1362,9 +1362,9 @@ ihc137:
 ihc138:
     cli
     call ihc138_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc139
@@ -1372,9 +1372,9 @@ ihc138:
 ihc139:
     cli
     call ihc139_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc140
@@ -1382,9 +1382,9 @@ ihc139:
 ihc140:
     cli
     call ihc140_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc141
@@ -1392,9 +1392,9 @@ ihc140:
 ihc141:
     cli
     call ihc141_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc142
@@ -1402,9 +1402,9 @@ ihc141:
 ihc142:
     cli
     call ihc142_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc143
@@ -1412,9 +1412,9 @@ ihc142:
 ihc143:
     cli
     call ihc143_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc144
@@ -1422,9 +1422,9 @@ ihc143:
 ihc144:
     cli
     call ihc144_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc145
@@ -1432,9 +1432,9 @@ ihc144:
 ihc145:
     cli
     call ihc145_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc146
@@ -1442,9 +1442,9 @@ ihc145:
 ihc146:
     cli
     call ihc146_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc147
@@ -1452,9 +1452,9 @@ ihc146:
 ihc147:
     cli
     call ihc147_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc148
@@ -1462,9 +1462,9 @@ ihc147:
 ihc148:
     cli
     call ihc148_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc149
@@ -1472,9 +1472,9 @@ ihc148:
 ihc149:
     cli
     call ihc149_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc150
@@ -1482,9 +1482,9 @@ ihc149:
 ihc150:
     cli
     call ihc150_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc151
@@ -1492,9 +1492,9 @@ ihc150:
 ihc151:
     cli
     call ihc151_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc152
@@ -1502,9 +1502,9 @@ ihc151:
 ihc152:
     cli
     call ihc152_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc153
@@ -1512,9 +1512,9 @@ ihc152:
 ihc153:
     cli
     call ihc153_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc154
@@ -1522,9 +1522,9 @@ ihc153:
 ihc154:
     cli
     call ihc154_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc155
@@ -1532,9 +1532,9 @@ ihc154:
 ihc155:
     cli
     call ihc155_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc156
@@ -1542,9 +1542,9 @@ ihc155:
 ihc156:
     cli
     call ihc156_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc157
@@ -1552,9 +1552,9 @@ ihc156:
 ihc157:
     cli
     call ihc157_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc158
@@ -1562,9 +1562,9 @@ ihc157:
 ihc158:
     cli
     call ihc158_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc159
@@ -1572,9 +1572,9 @@ ihc158:
 ihc159:
     cli
     call ihc159_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc160
@@ -1582,9 +1582,9 @@ ihc159:
 ihc160:
     cli
     call ihc160_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc161
@@ -1592,9 +1592,9 @@ ihc160:
 ihc161:
     cli
     call ihc161_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc162
@@ -1602,9 +1602,9 @@ ihc161:
 ihc162:
     cli
     call ihc162_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc163
@@ -1612,9 +1612,9 @@ ihc162:
 ihc163:
     cli
     call ihc163_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc164
@@ -1622,9 +1622,9 @@ ihc163:
 ihc164:
     cli
     call ihc164_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc165
@@ -1632,9 +1632,9 @@ ihc164:
 ihc165:
     cli
     call ihc165_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc166
@@ -1642,9 +1642,9 @@ ihc165:
 ihc166:
     cli
     call ihc166_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc167
@@ -1652,9 +1652,9 @@ ihc166:
 ihc167:
     cli
     call ihc167_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc168
@@ -1662,9 +1662,9 @@ ihc167:
 ihc168:
     cli
     call ihc168_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc169
@@ -1672,9 +1672,9 @@ ihc168:
 ihc169:
     cli
     call ihc169_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc170
@@ -1682,9 +1682,9 @@ ihc169:
 ihc170:
     cli
     call ihc170_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc171
@@ -1692,9 +1692,9 @@ ihc170:
 ihc171:
     cli
     call ihc171_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc172
@@ -1702,9 +1702,9 @@ ihc171:
 ihc172:
     cli
     call ihc172_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc173
@@ -1712,9 +1712,9 @@ ihc172:
 ihc173:
     cli
     call ihc173_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc174
@@ -1722,9 +1722,9 @@ ihc173:
 ihc174:
     cli
     call ihc174_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc175
@@ -1732,9 +1732,9 @@ ihc174:
 ihc175:
     cli
     call ihc175_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc176
@@ -1742,9 +1742,9 @@ ihc175:
 ihc176:
     cli
     call ihc176_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc177
@@ -1752,9 +1752,9 @@ ihc176:
 ihc177:
     cli
     call ihc177_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc178
@@ -1762,9 +1762,9 @@ ihc177:
 ihc178:
     cli
     call ihc178_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc179
@@ -1772,9 +1772,9 @@ ihc178:
 ihc179:
     cli
     call ihc179_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc180
@@ -1782,9 +1782,9 @@ ihc179:
 ihc180:
     cli
     call ihc180_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc181
@@ -1792,9 +1792,9 @@ ihc180:
 ihc181:
     cli
     call ihc181_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc182
@@ -1802,9 +1802,9 @@ ihc181:
 ihc182:
     cli
     call ihc182_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc183
@@ -1812,9 +1812,9 @@ ihc182:
 ihc183:
     cli
     call ihc183_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc184
@@ -1822,9 +1822,9 @@ ihc183:
 ihc184:
     cli
     call ihc184_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc185
@@ -1832,9 +1832,9 @@ ihc184:
 ihc185:
     cli
     call ihc185_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc186
@@ -1842,9 +1842,9 @@ ihc185:
 ihc186:
     cli
     call ihc186_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc187
@@ -1852,9 +1852,9 @@ ihc186:
 ihc187:
     cli
     call ihc187_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc188
@@ -1862,9 +1862,9 @@ ihc187:
 ihc188:
     cli
     call ihc188_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc189
@@ -1872,9 +1872,9 @@ ihc188:
 ihc189:
     cli
     call ihc189_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc190
@@ -1882,9 +1882,9 @@ ihc189:
 ihc190:
     cli
     call ihc190_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc191
@@ -1892,9 +1892,9 @@ ihc190:
 ihc191:
     cli
     call ihc191_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc192
@@ -1902,9 +1902,9 @@ ihc191:
 ihc192:
     cli
     call ihc192_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc193
@@ -1912,9 +1912,9 @@ ihc192:
 ihc193:
     cli
     call ihc193_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc194
@@ -1922,9 +1922,9 @@ ihc193:
 ihc194:
     cli
     call ihc194_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc195
@@ -1932,9 +1932,9 @@ ihc194:
 ihc195:
     cli
     call ihc195_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc196
@@ -1942,9 +1942,9 @@ ihc195:
 ihc196:
     cli
     call ihc196_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc197
@@ -1952,9 +1952,9 @@ ihc196:
 ihc197:
     cli
     call ihc197_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc198
@@ -1962,9 +1962,9 @@ ihc197:
 ihc198:
     cli
     call ihc198_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc199
@@ -1972,9 +1972,9 @@ ihc198:
 ihc199:
     cli
     call ihc199_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc200
@@ -1982,9 +1982,9 @@ ihc199:
 ihc200:
     cli
     call ihc200_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc201
@@ -1992,9 +1992,9 @@ ihc200:
 ihc201:
     cli
     call ihc201_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc202
@@ -2002,9 +2002,9 @@ ihc201:
 ihc202:
     cli
     call ihc202_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc203
@@ -2012,9 +2012,9 @@ ihc202:
 ihc203:
     cli
     call ihc203_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc204
@@ -2022,9 +2022,9 @@ ihc203:
 ihc204:
     cli
     call ihc204_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc205
@@ -2032,9 +2032,9 @@ ihc204:
 ihc205:
     cli
     call ihc205_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc206
@@ -2042,9 +2042,9 @@ ihc205:
 ihc206:
     cli
     call ihc206_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc207
@@ -2052,9 +2052,9 @@ ihc206:
 ihc207:
     cli
     call ihc207_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc208
@@ -2062,9 +2062,9 @@ ihc207:
 ihc208:
     cli
     call ihc208_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc209
@@ -2072,9 +2072,9 @@ ihc208:
 ihc209:
     cli
     call ihc209_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc210
@@ -2082,9 +2082,9 @@ ihc209:
 ihc210:
     cli
     call ihc210_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc211
@@ -2092,9 +2092,9 @@ ihc210:
 ihc211:
     cli
     call ihc211_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc212
@@ -2102,9 +2102,9 @@ ihc211:
 ihc212:
     cli
     call ihc212_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc213
@@ -2112,9 +2112,9 @@ ihc212:
 ihc213:
     cli
     call ihc213_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc214
@@ -2122,9 +2122,9 @@ ihc213:
 ihc214:
     cli
     call ihc214_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc215
@@ -2132,9 +2132,9 @@ ihc214:
 ihc215:
     cli
     call ihc215_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc216
@@ -2142,9 +2142,9 @@ ihc215:
 ihc216:
     cli
     call ihc216_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc217
@@ -2152,9 +2152,9 @@ ihc216:
 ihc217:
     cli
     call ihc217_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc218
@@ -2162,9 +2162,9 @@ ihc217:
 ihc218:
     cli
     call ihc218_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc219
@@ -2172,9 +2172,9 @@ ihc218:
 ihc219:
     cli
     call ihc219_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc220
@@ -2182,9 +2182,9 @@ ihc219:
 ihc220:
     cli
     call ihc220_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc221
@@ -2192,9 +2192,9 @@ ihc220:
 ihc221:
     cli
     call ihc221_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc222
@@ -2202,9 +2202,9 @@ ihc221:
 ihc222:
     cli
     call ihc222_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc223
@@ -2212,9 +2212,9 @@ ihc222:
 ihc223:
     cli
     call ihc223_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc224
@@ -2222,9 +2222,9 @@ ihc223:
 ihc224:
     cli
     call ihc224_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc225
@@ -2232,9 +2232,9 @@ ihc224:
 ihc225:
     cli
     call ihc225_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc226
@@ -2242,9 +2242,9 @@ ihc225:
 ihc226:
     cli
     call ihc226_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc227
@@ -2252,9 +2252,9 @@ ihc226:
 ihc227:
     cli
     call ihc227_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc228
@@ -2262,9 +2262,9 @@ ihc227:
 ihc228:
     cli
     call ihc228_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc229
@@ -2272,9 +2272,9 @@ ihc228:
 ihc229:
     cli
     call ihc229_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc230
@@ -2282,9 +2282,9 @@ ihc229:
 ihc230:
     cli
     call ihc230_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc231
@@ -2292,9 +2292,9 @@ ihc230:
 ihc231:
     cli
     call ihc231_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc232
@@ -2302,9 +2302,9 @@ ihc231:
 ihc232:
     cli
     call ihc232_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc233
@@ -2312,9 +2312,9 @@ ihc232:
 ihc233:
     cli
     call ihc233_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc234
@@ -2322,9 +2322,9 @@ ihc233:
 ihc234:
     cli
     call ihc234_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc235
@@ -2332,9 +2332,9 @@ ihc234:
 ihc235:
     cli
     call ihc235_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc236
@@ -2342,9 +2342,9 @@ ihc235:
 ihc236:
     cli
     call ihc236_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc237
@@ -2352,9 +2352,9 @@ ihc236:
 ihc237:
     cli
     call ihc237_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc238
@@ -2362,9 +2362,9 @@ ihc237:
 ihc238:
     cli
     call ihc238_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc239
@@ -2372,9 +2372,9 @@ ihc238:
 ihc239:
     cli
     call ihc239_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc240
@@ -2382,9 +2382,9 @@ ihc239:
 ihc240:
     cli
     call ihc240_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc241
@@ -2392,9 +2392,9 @@ ihc240:
 ihc241:
     cli
     call ihc241_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc242
@@ -2402,9 +2402,9 @@ ihc241:
 ihc242:
     cli
     call ihc242_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc243
@@ -2412,9 +2412,9 @@ ihc242:
 ihc243:
     cli
     call ihc243_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc244
@@ -2422,9 +2422,9 @@ ihc243:
 ihc244:
     cli
     call ihc244_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc245
@@ -2432,9 +2432,9 @@ ihc244:
 ihc245:
     cli
     call ihc245_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc246
@@ -2442,9 +2442,9 @@ ihc245:
 ihc246:
     cli
     call ihc246_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc247
@@ -2452,9 +2452,9 @@ ihc246:
 ihc247:
     cli
     call ihc247_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc248
@@ -2462,9 +2462,9 @@ ihc247:
 ihc248:
     cli
     call ihc248_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc249
@@ -2472,9 +2472,9 @@ ihc248:
 ihc249:
     cli
     call ihc249_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc250
@@ -2482,9 +2482,9 @@ ihc249:
 ihc250:
     cli
     call ihc250_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc251
@@ -2492,9 +2492,9 @@ ihc250:
 ihc251:
     cli
     call ihc251_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc252
@@ -2502,9 +2502,9 @@ ihc251:
 ihc252:
     cli
     call ihc252_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc253
@@ -2512,9 +2512,9 @@ ihc252:
 ihc253:
     cli
     call ihc253_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc254
@@ -2522,9 +2522,9 @@ ihc253:
 ihc254:
     cli
     call ihc254_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq
 
 .global ihc255
@@ -2532,7 +2532,7 @@ ihc254:
 ihc255:
     cli
     call ihc255_handler
-    sti
     movb $20, %al
     outb %al, $20
+    sti
     iretq

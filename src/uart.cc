@@ -8,7 +8,7 @@ void uart::putc(char c)
     do {
         status = inb(0x3f8);
     } while ((status & 0x20) == 0);
-    ports::port(0x3f8) << (u8)c;
+    outb(0x3f8, c);
 }
 
 void uart::puts(char *s)

@@ -1,26 +1,26 @@
-#include <types.h>
-#include <uart.h>
-#include <acpi.h>
-#include <idt.h>
-#include <irq.h>
-#include <bootboot.h>
-#include <config.h>
-#include <initrd.h>
-#include <ihc.h>
-#include <pit.h>
-#include <clock.h>
-#include <sysfn.h>
+#include <types.hh>
+#include <uart.hh>
+#include <acpi.hh>
+#include <idt.hh>
+#include <irq.hh>
+#include <boot.hh>
+#include <config.hh>
+#include <initrd.hh>
+#include <ihc.hh>
+#include <pit.hh>
+#include <clock.hh>
+#include <sysfn.hh>
 
-extern BOOTBOOT bootboot;
+extern BOOT::BOOTBOOT bootboot;
 
 nomangle
-void cxx_main() {
+int main() {
     uart::cout << "\n * Octox v" MMP "+rev" MLS " (build " __DATE__ " " __TIME__ ")\n";
     uart::cout << '\n';
     uart::cout << " * INITRD located at " << bootboot.initrd_ptr << '\n';
     uart::cout << " * memory map located at " << (u64)&bootboot.mmap.ptr << '\n';
     uart::cout << " * ACPI ID (must be zero): " << (u8)acpi::id() << '\n';
-    uart::cout << " * ACPI CPU count: " << (u8)ACPI_CpuCount << '\n';
+    uart::cout << " * ACPI CPU count: " << (u8)acpi::cpu_count << '\n';
     uart::cout << " * CS Value: " << (u64)get_cs() << '\n';
 
     uart::cout << " * INITRD Initialization... ";

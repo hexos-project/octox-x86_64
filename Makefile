@@ -3,20 +3,17 @@ CXXFLAGS = $(CFLAGS) -fno-exceptions -fno-rtti
 LDFLAGS =  -nostdlib -n -T link.ld
 STRIPFLAGS =  -s -K mmio -K fb -K bootboot -K environment -K initstack
 ASFLAGS =
-RSFLAGS = --crate-type=staticlib -C panic=abort -C opt-level=3 -C debuginfo=none -C strip=symbols
 OBJDIR = objects
 
 CSOURCES = $(shell find src -name '*.c' -not -name '.*')
 SSOURCES = $(shell find src -name '*.S' -not -name '.*')
 CPPSOURCES = $(shell find src -name '*.cc' -not -name '.*')
-RSSOURCES = $(shell find src -name '*.rs' -not -name '.*')
 FASMSOURCES = $(shell find src -name '*.fasm' -not -name '.*')
 OBJECTS = $(patsubst src/%.c,$(OBJDIR)/%_c.o,$(CSOURCES)) \
 		  $(patsubst src/%.S,$(OBJDIR)/%_s.o,$(SSOURCES)) \
 		  $(patsubst src/%.cc,$(OBJDIR)/%_cc.o,$(CPPSOURCES)) \
-		  $(patsubst src/%.rs,$(OBJDIR)/%_rs.o,$(RSSOURCES)) \
 		  $(patsubst src/%.fasm,$(OBJDIR)/%_fasm.o,$(FASMSOURCES))
-SOURCES = $(CSOURCES) $(SSOURCES) $(CPPSOURCES) $(RSSOURCES) $(FASMSOURCES)
+SOURCES = $(CSOURCES) $(SSOURCES) $(CPPSOURCES) $(FASMSOURCES)
 
 
 build: prepare all
@@ -45,10 +42,6 @@ $(OBJDIR)/%_s.o: src/%.S
 	@echo "    AS\t$<"
 	@as $(ASFLAGS) -o $@ $<
 
-$(OBJDIR)/%_rs.o: src/%.rs
-	@echo "    RS\t$<"
-	@rustc $(RSFLAGS) $< -o $@
-
 $(OBJDIR)/%_fasm.o: src/%.fasm
 	@echo "    FA\t$<"
 	@fasm $< $@ > /dev/null
@@ -59,5 +52,5 @@ clean:
 	@rm -f kernel.elf
 
 config:
-	@echo "    GEN\tconfig.h"
+	@echo "    GEN\tconfig.hh"
 	@$$SHELL ./genconfig.sh

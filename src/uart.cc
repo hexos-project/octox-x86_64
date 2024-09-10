@@ -1,6 +1,28 @@
-#include <uart.h>
-#include <ports.h>
+#include <uart.hh>
+#include <ports.hh>
 
+
+#define UART_BASE 0x3F8
+
+void uart::putc(char c)
+{
+    while ((inb(UART_BASE + 5) & 0x20) == 0);
+    outb(UART_BASE, c);
+}
+
+void uart::puts(const char *s)
+{
+    while (*s) {
+        uart::putc(*s++);
+    }
+}
+
+void uart::puts(char *s)
+{
+    while (*s) {
+        uart::putc(*s++);
+    }
+}
 
 void uart::puthex(u64 n)
 {

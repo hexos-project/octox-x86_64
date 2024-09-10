@@ -14,56 +14,5 @@ section '.text' executable
 ; r9
 
 _syscall:
-    mov [.tmp_rdi], rdi
-    mov [.tmp_rsi], rsi
-    mov [.tmp_rdx], rdx
-    mov [.tmp_rcx], rcx
-    mov [.tmp_r8], r8
-    mov [.tmp_r9], r9
-    mov rdi, .msg0
-    call uart_puts
-    mov rdi, [.tmp_rdi]
-    call uart_puthex
-    mov rdi, .msg1
-    call uart_puts
-    mov rdi, [.tmp_rsi]
-    call uart_puthex
-    mov rdi, .msg2
-    call uart_puts
-    mov rdi, [.tmp_rdx]
-    call uart_puthex
-    mov rdi, .msg3
-    call uart_puts
-    mov rdi, [.tmp_rcx]
-    call uart_puthex
-    mov rdi, .msg4
-    call uart_puts
-    mov rdi, [.tmp_r8]
-    call uart_puthex
-    mov rdi, .msg5
-    call uart_puts
-    mov rdi, [.tmp_r9]
-    call uart_puthex
-
-    mov rdi, [.tmp_rdi]
-    mov rsi, [.tmp_rsi]
-    mov rdx, [.tmp_rdx]
-    mov rcx, [.tmp_rcx]
-    mov r8,  [.tmp_r8]
-    mov r9,  [.tmp_r9]
     int 0x80
     ret
-
-.tmp_rdi rq 1
-.tmp_rsi rq 1
-.tmp_rdx rq 1
-.tmp_rcx rq 1
-.tmp_r8  rq 1
-.tmp_r9  rq 1
-
-.msg0: db "_syscall: component=", 0
-.msg1: db ", arg1=", 0
-.msg2: db ", arg2=", 0
-.msg3: db ", arg3=", 0
-.msg4: db ", arg4=", 0
-.msg5: db ", arg5=", 0

@@ -1,8 +1,8 @@
-#include <types.h>
-#include <ihc.h>
-#include <uart.h>
-#include <ihc.h>
-#include <irq.h>
+#include <types.hh>
+#include <ihc.hh>
+#include <uart.hh>
+#include <ihc.hh>
+#include <irq.hh>
 
 #define COMP_NOP                  0x0000000000000000ULL
 #define COMP_COM_SERIAL_UART_PUTS 0x0001000000000000ULL

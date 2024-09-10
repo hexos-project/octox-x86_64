@@ -23,6 +23,14 @@ void IRQ::all_off() {
     outb(PIC::slave::data, 0xFF);
 }
 
+void IRQ::on(irqs irq) {
+    IRQ::all_on();
+}
+
+void IRQ::off(irqs irq) {
+    IRQ::all_off();
+}
+
 void IRQ::on(u8 irq) {
     u8 mask;
 

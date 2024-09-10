@@ -40,7 +40,7 @@ int main() {
     uart::cout << "Done\n";
 
     uart::cout << " * Disabling IRQs... ";
-    IRQ::all_off();
+    IRQ::off(IRQ::all);
     uart::cout << "Done\n";
 
     uart::cout << " * Enabling interrupts:\n";

@@ -1,3 +1,6 @@
+
+asm ( R"(
+
 .global ihc0
 .extern ihc0_handler
 ihc0:
@@ -2536,3 +2539,4 @@ ihc255:
     outb %al, $20
     sti
     iretq
+)");

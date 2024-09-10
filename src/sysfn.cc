@@ -40,3 +40,11 @@ void sysfn_ihc_handler(u64 component, u64 arg1, u64 arg2, u64 arg3, u64 arg4, u6
     }
             
 }
+
+asm ( R"(
+.global _syscall
+_syscall:
+    int $0x80
+    ret
+)"
+);
